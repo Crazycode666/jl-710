@@ -1,0 +1,31 @@
+objs/apps/common/third_party_profile/interface/app_protocol_ota.c.o: \
+  apps/common/third_party_profile/interface/app_protocol_ota.c \
+  apps/soundbox/include\app_config.h \
+  include_lib/driver/cpu/br28\asm/clock_define.h \
+  apps/common/third_party_profile/jieli/rcsp/rcsp_functions\rcsp_define.h \
+  apps/soundbox/board/br28\board_config.h include_lib\media/audio_def.h \
+  apps/soundbox/board/br28/board_jl701n_demo/board_jl701n_demo_cfg.h \
+  apps/soundbox/board/br28/board_jl701n_demo/board_jl701n_demo_global_build_cfg.h \
+  apps/soundbox/board/br28/board_jl701n_soundcard/board_jl701n_soundcard_cfg.h \
+  apps/soundbox/board/br28/board_jl701n_soundcard/board_jl701n_soundcard_global_build_cfg.h \
+  apps/soundbox/board/br28/board_jl701n_btemitter/board_jl701n_btemitter_cfg.h \
+  apps/soundbox/board/br28/board_jl701n_btemitter/board_jl701n_btemitter_global_build_cfg.h \
+  apps/soundbox/board/br28/board_jl701n_smartbox/board_jl701n_smartbox_cfg.h \
+  apps/soundbox/board/br28/board_jl701n_smartbox/board_jl701n_smartbox_global_build_cfg.h \
+  apps/soundbox/board/br28/board_jl701n_tws_box/board_jl701n_tws_box_cfg.h \
+  apps/soundbox/board/br28/board_jl701n_tws_box/board_jl701n_tws_box_global_build_cfg.h \
+  apps/common/device/usb\usb_std_class_def.h \
+  apps/soundbox/board/br28/board_jl701n_unisound/board_jl701n_unisound_cfg.h \
+  apps/soundbox/board/br28/board_jl701n_unisound/board_jl701n_unisound_global_build_cfg.h \
+  apps/soundbox/board/br28/board_jl701n_wireless_1tN/board_jl701n_wireless_1tN_cfg.h \
+  apps/soundbox/board/br28/board_jl701n_wireless_1tN/board_jl701n_wireless_1tN_global_build_cfg.h \
+  apps/soundbox/board/br28/board_jl701n_wireless_2t1_duplex/board_jl701n_wireless_2t1_duplex_cfg.h \
+  apps/soundbox/board/br28/board_jl701n_wireless_2t1_duplex/board_jl701n_wireless_2t1_duplex_global_build_cfg.h \
+  apps/soundbox/board/br28/board_jl701n_test/board_jl701n_test_cfg.h \
+  apps/soundbox/board/br28/board_jl701n_test/board_jl701n_test_global_build_cfg.h \
+  include_lib/btctrler\btcontroller_mode.h \
+  apps/soundbox/include/user_cfg_id.h \
+  apps/common/third_party_profile/jieli/rcsp\rcsp_cfg.h \
+  apps/common/device/usb\usb_common_def.h \
+  apps/soundbox/include/macro_default.h \
+  apps/soundbox/include/build_error.h

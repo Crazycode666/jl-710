@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Release" />
+	<File name="cpu\br28\audio_dec\live_stream_player.c" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="217" topLine="312" />
+		</Cursor>
+	</File>
+	<File name="cpu\br28\audio_config.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5176" topLine="93" />
+		</Cursor>
+	</File>
+	<File name="apps\common\device\usb\device\uac1.c" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="29748" topLine="842" />
+		</Cursor>
+	</File>
+	<File name="apps\soundbox\app_main.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3344" topLine="114" />
+		</Cursor>
+	</File>
+	<File name="cpu\br28\audio_dec\audio_dec_pc.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="40442" topLine="1297" />
+		</Cursor>
+	</File>
+	<File name="include_lib\driver\device\usb\device\uac_audio.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="14110" topLine="412" />
+		</Cursor>
+	</File>
+	<File name="apps\soundbox\ui\led\pwm_led_api.c" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9854" topLine="318" />
+		</Cursor>
+	</File>
+	<File name="apps\soundbox\include\ui_manage.h" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2041" topLine="36" />
+		</Cursor>
+	</File>
+	<File name="apps\soundbox\task_manager\power_on\power_on.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1636" topLine="55" />
+		</Cursor>
+	</File>
+	<File name="apps\soundbox\board\br28\board_jl701n_wireless_2t1_duplex\board_jl701n_wireless_2t1_duplex_cfg.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="29566" topLine="556" />
+		</Cursor>
+	</File>
+	<File name="apps\common\audio\audio_digital_vol.c" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1865" topLine="43" />
+		</Cursor>
+	</File>
+	<File name="apps\soundbox\board\br28\board_config.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="297" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="apps\soundbox\common\user_cfg_new.c" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="580" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="apps\common\device\usb\device\uac_stream.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3884" topLine="142" />
+		</Cursor>
+	</File>
+	<File name="apps\common\device\usb\usb_std_class_def.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2544" topLine="67" />
+		</Cursor>
+	</File>
+	<File name="apps\soundbox\connected\app_connected.c" open="1" top="1" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="13550" topLine="359" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>
