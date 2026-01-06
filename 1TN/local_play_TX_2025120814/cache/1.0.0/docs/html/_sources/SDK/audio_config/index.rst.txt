@@ -1,0 +1,29 @@
+
+音频配置
+#########
+
+.. toctree::
+   :maxdepth: 1
+
+   DAC_cfg.md
+   ADC_cfg.md
+   mic_capless_manual.md
+   Linein_cfg.md
+   IIS_cfg.md
+   PDM_cfg.md
+   ANC/index.rst
+   General_cfg.md
+   audio_algo_cfg.md
+   codec/index.rst
+   music_palyback.md
+   production_test.md
+   kws.md
+   spatial_audio.md
+   Hi_Res_Audio/index.rst
+   Side_Tone.md
+   audio_code_size.md
+   audio_code_section.md
+   audio_delay.md
+   audio_debug.md
+
+

@@ -1,0 +1,1693 @@
+{
+ "fields": [
+  {
+   "__config__": {
+    "layout": "rowFormItem",
+    "tag": "group",
+    "tagIcon": "row",
+    "layoutTree": true,
+    "componentName": "UI配置",
+    "enableUuid": "TCFG_UI_ENABLE",
+    "showComponentName": true,
+    "dataType": [
+     "8",
+     "1"
+    ],
+    "template": "",
+    "span": 24,
+    "formId": 660,
+    "renderKey": "6601678622212458",
+    "children": [
+     {
+      "__config__": {
+       "layout": "rowFormItem",
+       "tag": "group",
+       "tagIcon": "row",
+       "layoutTree": true,
+       "componentName": "UI类型",
+       "enableUuid": "",
+       "showComponentName": false,
+       "dataType": [
+        "8",
+        "1"
+       ],
+       "template": "",
+       "span": 24,
+       "formId": 670,
+       "renderKey": "6701678623061293",
+       "children": [
+        {
+         "__config__": {
+          "label": "UI类型",
+          "labelWidth": 80,
+          "showLabel": true,
+          "tag": "el-radio-group",
+          "tagIcon": "radio",
+          "changeTag": true,
+          "defaultValue": "STYLE_JL_LED7",
+          "layout": "colFormItem",
+          "span": 24,
+          "optionType": "default",
+          "regList": [],
+          "required": false,
+          "border": false,
+          "dataType": [
+           "macro"
+          ],
+          "formId": 669,
+          "renderKey": "6691678622751766",
+          "originValue": "STYLE_JL_LED7",
+          "saveWay": "macro",
+          "uuid": "CONFIG_UI_STYLE",
+          "tip": "",
+          "tipAlways": false,
+          "eventField": [],
+          "formItemWidth": ""
+         },
+         "__slot__": {
+          "options": [
+           {
+            "label": "LED数码管屏",
+            "value": "STYLE_JL_LED7"
+           }
+          ]
+         },
+         "style": {
+          "width": "450px"
+         },
+         "size": "medium",
+         "disabled": false,
+         "id": "id_1678622751766_9",
+         "__vModel__": "field669"
+        }
+       ],
+       "eventField": []
+      },
+      "type": "default",
+      "justify": "start",
+      "align": "top",
+      "style": {
+       "height": "40px",
+       "paddingLeft": "0px"
+      },
+      "id": "id_1678623061293_10",
+      "show-text": false
+     },
+     {
+      "__config__": {
+       "layout": "rowFormItem",
+       "tag": "group",
+       "tagIcon": "row",
+       "layoutTree": true,
+       "componentName": "LED数码管屏配置",
+       "enableUuid": "",
+       "showComponentName": true,
+       "dataType": [
+        "8",
+        "1"
+       ],
+       "template": "",
+       "span": 24,
+       "formId": 806,
+       "renderKey": "8061679646183102",
+       "children": [
+        {
+         "__config__": {
+          "label": "LED屏驱动跑RAM",
+          "tag": "el-switch",
+          "tagIcon": "switch",
+          "defaultValue": 1,
+          "span": 12,
+          "showLabel": true,
+          "labelWidth": 150,
+          "layout": "colFormItem",
+          "required": false,
+          "regList": [],
+          "changeTag": true,
+          "dataType": [
+           "float"
+          ],
+          "formId": 689,
+          "renderKey": "6891678623838622",
+          "saveWay": "macro",
+          "uuid": "TCFG_LED7_RUN_RAM",
+          "originValue": 0,
+          "formItemWidth": "",
+          "emptyValue": "0",
+          "eventField": []
+         },
+         "style": {},
+         "disabled": false,
+         "active-text": "",
+         "inactive-text": "",
+         "active-color": null,
+         "inactive-color": null,
+         "active-value": 1,
+         "inactive-value": 0,
+         "id": "id_1678623838622_29",
+         "__vModel__": "field689"
+        },
+        {
+         "__config__": {
+          "label": "LED7脚数码管屏",
+          "tag": "el-switch",
+          "tagIcon": "switch",
+          "defaultValue": 1,
+          "span": 12,
+          "showLabel": true,
+          "labelWidth": 150,
+          "layout": "colFormItem",
+          "required": false,
+          "regList": [],
+          "changeTag": true,
+          "dataType": [
+           "float"
+          ],
+          "formId": 787,
+          "renderKey": "7871678794312350",
+          "saveWay": "macro",
+          "uuid": "TCFG_UI_LED7_ENABLE",
+          "originValue": 1,
+          "formItemWidth": "",
+          "emptyValue": "0"
+         },
+         "style": {},
+         "disabled": false,
+         "active-text": "",
+         "inactive-text": "",
+         "active-color": null,
+         "inactive-color": null,
+         "active-value": 1,
+         "inactive-value": 0,
+         "id": "id_1678794312350_1",
+         "__vModel__": "field787"
+        }
+       ],
+       "eventField": []
+      },
+      "type": "default",
+      "justify": "start",
+      "align": "top",
+      "style": {
+       "height": "40px",
+       "paddingLeft": "0px"
+      },
+      "id": "id_1679646183102_0"
+     },
+     {
+      "__config__": {
+       "layout": "rowFormItem",
+       "tag": "group",
+       "tagIcon": "row",
+       "layoutTree": true,
+       "componentName": "LED屏引脚配置",
+       "enableUuid": "",
+       "showComponentName": true,
+       "dataType": [
+        "8",
+        "1"
+       ],
+       "template": "",
+       "span": 24,
+       "formId": 687,
+       "renderKey": "6871678623647935",
+       "children": [
+        {
+         "__config__": {
+          "layout": "rowFormItem",
+          "tag": "group",
+          "tagIcon": "row",
+          "layoutTree": true,
+          "componentName": "row_671",
+          "enableUuid": "",
+          "showComponentName": false,
+          "dataType": [
+           "8",
+           "1"
+          ],
+          "template": "",
+          "span": 24,
+          "formId": 671,
+          "renderKey": "6711678623122614",
+          "children": [
+           {
+            "__config__": {
+             "label": "LED引脚0",
+             "showLabel": true,
+             "labelWidth": null,
+             "tag": "el-select",
+             "tagIcon": "select",
+             "layout": "colFormItem",
+             "span": 12,
+             "required": false,
+             "regList": [],
+             "changeTag": true,
+             "searchSource": false,
+             "dataType": [
+              "macro"
+             ],
+             "formId": 674,
+             "renderKey": "6741678623376462",
+             "saveWay": "macro",
+             "eventField": [
+              "device",
+              "gpio"
+             ],
+             "uuid": "TCFG_LED7_PIN0",
+             "emptyValue": "NO_CONFIG_PORT",
+             "defaultValue": "NO_CONFIG_PORT",
+             "originValue": "NO_CONFIG_PORT"
+            },
+            "__slot__": {
+             "options": [
+              {
+               "label": "IO_PORTA_00",
+               "value": "id_1647485267192_66"
+              },
+              {
+               "label": "IO_PORTA_01",
+               "value": "id_1647485267192_67"
+              },
+              {
+               "label": "IO_PORTA_02",
+               "value": "id_1647485267192_68"
+              },
+              {
+               "label": "IO_PORTA_03",
+               "value": "id_1647485267192_69"
+              },
+              {
+               "label": "IO_PORTA_04",
+               "value": "id_1647485267192_70"
+              },
+              {
+               "label": "IO_PORTA_05",
+               "value": "id_1647485267192_71"
+              },
+              {
+               "label": "IO_PORTA_06",
+               "value": "id_1647485267192_72"
+              },
+              {
+               "label": "IO_PORTB_00",
+               "value": "id_1647485267192_74"
+              },
+              {
+               "label": "IO_PORTB_01",
+               "value": "id_1647485267192_75"
+              },
+              {
+               "label": "IO_PORTB_02",
+               "value": "id_1647485267192_76"
+              },
+              {
+               "label": "IO_PORTB_03",
+               "value": "id_1647485267192_77"
+              },
+              {
+               "label": "IO_PORTB_04",
+               "value": "id_1647485267192_78"
+              },
+              {
+               "label": "IO_PORTB_05",
+               "value": "id_1647485267192_79"
+              },
+              {
+               "label": "IO_PORTB_06",
+               "value": "id_1647485267192_80"
+              },
+              {
+               "label": "IO_PORTB_07",
+               "value": "id_1647485267192_81"
+              },
+              {
+               "label": "IO_PORTB_08",
+               "value": "id_1659942520267_25"
+              },
+              {
+               "label": "IO_PORTB_09",
+               "value": "id_1659942416666_18"
+              },
+              {
+               "label": "IO_PORTB_10",
+               "value": "id_1659942417369_19"
+              },
+              {
+               "label": "IO_PORTB_11",
+               "value": "id_1659942418129_20"
+              },
+              {
+               "label": "IO_PORTC_00",
+               "value": "id_1647485267192_82"
+              },
+              {
+               "label": "IO_PORTC_01",
+               "value": "id_1647485267192_83"
+              },
+              {
+               "label": "IO_PORTC_02",
+               "value": "id_1647485267192_84"
+              },
+              {
+               "label": "IO_PORTC_03",
+               "value": "id_1647485267192_85"
+              },
+              {
+               "label": "IO_PORTC_04",
+               "value": "id_1647485267192_86"
+              },
+              {
+               "label": "IO_PORT_DM",
+               "value": "id_1651200854573_20"
+              },
+              {
+               "label": "IO_PORT_DP",
+               "value": "id_1651200840445_19"
+              },
+              {
+               "label": "IO_PORTF_00",
+               "value": "id_1708670662890_5"
+              },
+              {
+               "label": "IO_PORTF_01",
+               "value": "id_1708670490604_0"
+              },
+              {
+               "label": "IO_PORTF_02",
+               "value": "id_1708670648187_1"
+              },
+              {
+               "label": "IO_PORTF_03",
+               "value": "id_1708670652673_2"
+              },
+              {
+               "label": "IO_PORTF_04",
+               "value": "id_1708670655579_3"
+              },
+              {
+               "label": "IO_PORTF_05",
+               "value": "id_1708670659570_4"
+              },
+              {
+               "label": "IO_PORTP_00",
+               "value": "id_1743077011773_0"
+              },
+              {
+               "label": "IO_PORTP_01",
+               "value": "id_1743077060182_1"
+              },
+              {
+               "label": "IO_PORTP_02",
+               "value": "id_1743077061613_2"
+              },
+              {
+               "label": "NO_CONFIG_PORT",
+               "value": "id_1743405039177_0"
+              }
+             ]
+            },
+            "placeholder": "请选择LED引脚0",
+            "style": {
+             "width": "100%"
+            },
+            "clearable": true,
+            "disabled": false,
+            "filterable": false,
+            "multiple": false,
+            "id": "id_1678623376462_14",
+            "__vModel__": "field674",
+            "searchSource": true
+           },
+           {
+            "__config__": {
+             "label": "LED引脚1",
+             "showLabel": true,
+             "labelWidth": null,
+             "tag": "el-select",
+             "tagIcon": "select",
+             "layout": "colFormItem",
+             "span": 12,
+             "required": false,
+             "regList": [],
+             "changeTag": true,
+             "searchSource": false,
+             "dataType": [
+              "macro"
+             ],
+             "formId": 677,
+             "renderKey": "6771678623521305",
+             "saveWay": "macro",
+             "eventField": [
+              "device",
+              "gpio"
+             ],
+             "uuid": "TCFG_LED7_PIN1",
+             "emptyValue": "NO_CONFIG_PORT",
+             "defaultValue": "NO_CONFIG_PORT",
+             "originValue": "NO_CONFIG_PORT"
+            },
+            "__slot__": {
+             "options": [
+              {
+               "label": "IO_PORTA_00",
+               "value": "id_1647485267192_66"
+              },
+              {
+               "label": "IO_PORTA_01",
+               "value": "id_1647485267192_67"
+              },
+              {
+               "label": "IO_PORTA_02",
+               "value": "id_1647485267192_68"
+              },
+              {
+               "label": "IO_PORTA_03",
+               "value": "id_1647485267192_69"
+              },
+              {
+               "label": "IO_PORTA_04",
+               "value": "id_1647485267192_70"
+              },
+              {
+               "label": "IO_PORTA_05",
+               "value": "id_1647485267192_71"
+              },
+              {
+               "label": "IO_PORTA_06",
+               "value": "id_1647485267192_72"
+              },
+              {
+               "label": "IO_PORTB_00",
+               "value": "id_1647485267192_74"
+              },
+              {
+               "label": "IO_PORTB_01",
+               "value": "id_1647485267192_75"
+              },
+              {
+               "label": "IO_PORTB_02",
+               "value": "id_1647485267192_76"
+              },
+              {
+               "label": "IO_PORTB_03",
+               "value": "id_1647485267192_77"
+              },
+              {
+               "label": "IO_PORTB_04",
+               "value": "id_1647485267192_78"
+              },
+              {
+               "label": "IO_PORTB_05",
+               "value": "id_1647485267192_79"
+              },
+              {
+               "label": "IO_PORTB_06",
+               "value": "id_1647485267192_80"
+              },
+              {
+               "label": "IO_PORTB_07",
+               "value": "id_1647485267192_81"
+              },
+              {
+               "label": "IO_PORTB_08",
+               "value": "id_1659942520267_25"
+              },
+              {
+               "label": "IO_PORTB_09",
+               "value": "id_1659942416666_18"
+              },
+              {
+               "label": "IO_PORTB_10",
+               "value": "id_1659942417369_19"
+              },
+              {
+               "label": "IO_PORTB_11",
+               "value": "id_1659942418129_20"
+              },
+              {
+               "label": "IO_PORTC_00",
+               "value": "id_1647485267192_82"
+              },
+              {
+               "label": "IO_PORTC_01",
+               "value": "id_1647485267192_83"
+              },
+              {
+               "label": "IO_PORTC_02",
+               "value": "id_1647485267192_84"
+              },
+              {
+               "label": "IO_PORTC_03",
+               "value": "id_1647485267192_85"
+              },
+              {
+               "label": "IO_PORTC_04",
+               "value": "id_1647485267192_86"
+              },
+              {
+               "label": "IO_PORT_DM",
+               "value": "id_1651200854573_20"
+              },
+              {
+               "label": "IO_PORT_DP",
+               "value": "id_1651200840445_19"
+              },
+              {
+               "label": "IO_PORTF_00",
+               "value": "id_1708670662890_5"
+              },
+              {
+               "label": "IO_PORTF_01",
+               "value": "id_1708670490604_0"
+              },
+              {
+               "label": "IO_PORTF_02",
+               "value": "id_1708670648187_1"
+              },
+              {
+               "label": "IO_PORTF_03",
+               "value": "id_1708670652673_2"
+              },
+              {
+               "label": "IO_PORTF_04",
+               "value": "id_1708670655579_3"
+              },
+              {
+               "label": "IO_PORTF_05",
+               "value": "id_1708670659570_4"
+              },
+              {
+               "label": "IO_PORTP_00",
+               "value": "id_1743077011773_0"
+              },
+              {
+               "label": "IO_PORTP_01",
+               "value": "id_1743077060182_1"
+              },
+              {
+               "label": "IO_PORTP_02",
+               "value": "id_1743077061613_2"
+              },
+              {
+               "label": "NO_CONFIG_PORT",
+               "value": "id_1743405039177_0"
+              }
+             ]
+            },
+            "placeholder": "请选择LED引脚1",
+            "style": {
+             "width": "100%"
+            },
+            "clearable": true,
+            "disabled": false,
+            "filterable": false,
+            "multiple": false,
+            "id": "id_1678623521305_17",
+            "__vModel__": "field677",
+            "searchSource": true
+           }
+          ],
+          "eventField": []
+         },
+         "type": "default",
+         "justify": "start",
+         "align": "top",
+         "style": {
+          "height": "40px",
+          "paddingLeft": "0px"
+         },
+         "id": "id_1678623122614_11"
+        },
+        {
+         "__config__": {
+          "layout": "rowFormItem",
+          "tag": "group",
+          "tagIcon": "row",
+          "layoutTree": true,
+          "componentName": "row_678",
+          "enableUuid": "",
+          "showComponentName": false,
+          "dataType": [
+           "8",
+           "1"
+          ],
+          "template": "",
+          "span": 24,
+          "formId": 678,
+          "renderKey": "6781678623549283",
+          "children": [
+           {
+            "__config__": {
+             "label": "LED引脚2",
+             "showLabel": true,
+             "labelWidth": null,
+             "tag": "el-select",
+             "tagIcon": "select",
+             "layout": "colFormItem",
+             "span": 12,
+             "required": false,
+             "regList": [],
+             "changeTag": true,
+             "searchSource": false,
+             "dataType": [
+              "macro"
+             ],
+             "formId": 679,
+             "renderKey": "6791678623549283",
+             "saveWay": "macro",
+             "eventField": [
+              "device",
+              "gpio"
+             ],
+             "uuid": "TCFG_LED7_PIN2",
+             "emptyValue": "NO_CONFIG_PORT",
+             "defaultValue": "NO_CONFIG_PORT",
+             "originValue": "NO_CONFIG_PORT"
+            },
+            "__slot__": {
+             "options": [
+              {
+               "label": "IO_PORTA_00",
+               "value": "id_1647485267192_66"
+              },
+              {
+               "label": "IO_PORTA_01",
+               "value": "id_1647485267192_67"
+              },
+              {
+               "label": "IO_PORTA_02",
+               "value": "id_1647485267192_68"
+              },
+              {
+               "label": "IO_PORTA_03",
+               "value": "id_1647485267192_69"
+              },
+              {
+               "label": "IO_PORTA_04",
+               "value": "id_1647485267192_70"
+              },
+              {
+               "label": "IO_PORTA_05",
+               "value": "id_1647485267192_71"
+              },
+              {
+               "label": "IO_PORTA_06",
+               "value": "id_1647485267192_72"
+              },
+              {
+               "label": "IO_PORTB_00",
+               "value": "id_1647485267192_74"
+              },
+              {
+               "label": "IO_PORTB_01",
+               "value": "id_1647485267192_75"
+              },
+              {
+               "label": "IO_PORTB_02",
+               "value": "id_1647485267192_76"
+              },
+              {
+               "label": "IO_PORTB_03",
+               "value": "id_1647485267192_77"
+              },
+              {
+               "label": "IO_PORTB_04",
+               "value": "id_1647485267192_78"
+              },
+              {
+               "label": "IO_PORTB_05",
+               "value": "id_1647485267192_79"
+              },
+              {
+               "label": "IO_PORTB_06",
+               "value": "id_1647485267192_80"
+              },
+              {
+               "label": "IO_PORTB_07",
+               "value": "id_1647485267192_81"
+              },
+              {
+               "label": "IO_PORTB_08",
+               "value": "id_1659942520267_25"
+              },
+              {
+               "label": "IO_PORTB_09",
+               "value": "id_1659942416666_18"
+              },
+              {
+               "label": "IO_PORTB_10",
+               "value": "id_1659942417369_19"
+              },
+              {
+               "label": "IO_PORTB_11",
+               "value": "id_1659942418129_20"
+              },
+              {
+               "label": "IO_PORTC_00",
+               "value": "id_1647485267192_82"
+              },
+              {
+               "label": "IO_PORTC_01",
+               "value": "id_1647485267192_83"
+              },
+              {
+               "label": "IO_PORTC_02",
+               "value": "id_1647485267192_84"
+              },
+              {
+               "label": "IO_PORTC_03",
+               "value": "id_1647485267192_85"
+              },
+              {
+               "label": "IO_PORTC_04",
+               "value": "id_1647485267192_86"
+              },
+              {
+               "label": "IO_PORT_DM",
+               "value": "id_1651200854573_20"
+              },
+              {
+               "label": "IO_PORT_DP",
+               "value": "id_1651200840445_19"
+              },
+              {
+               "label": "IO_PORTF_00",
+               "value": "id_1708670662890_5"
+              },
+              {
+               "label": "IO_PORTF_01",
+               "value": "id_1708670490604_0"
+              },
+              {
+               "label": "IO_PORTF_02",
+               "value": "id_1708670648187_1"
+              },
+              {
+               "label": "IO_PORTF_03",
+               "value": "id_1708670652673_2"
+              },
+              {
+               "label": "IO_PORTF_04",
+               "value": "id_1708670655579_3"
+              },
+              {
+               "label": "IO_PORTF_05",
+               "value": "id_1708670659570_4"
+              },
+              {
+               "label": "IO_PORTP_00",
+               "value": "id_1743077011773_0"
+              },
+              {
+               "label": "IO_PORTP_01",
+               "value": "id_1743077060182_1"
+              },
+              {
+               "label": "IO_PORTP_02",
+               "value": "id_1743077061613_2"
+              },
+              {
+               "label": "NO_CONFIG_PORT",
+               "value": "id_1743405039177_0"
+              }
+             ]
+            },
+            "placeholder": "请选择LED引脚2",
+            "style": {
+             "width": "100%"
+            },
+            "clearable": true,
+            "disabled": false,
+            "filterable": false,
+            "multiple": false,
+            "id": "id_1678623549283_19",
+            "__vModel__": "field679",
+            "searchSource": true
+           },
+           {
+            "__config__": {
+             "label": "LED引脚3",
+             "showLabel": true,
+             "labelWidth": null,
+             "tag": "el-select",
+             "tagIcon": "select",
+             "layout": "colFormItem",
+             "span": 12,
+             "required": false,
+             "regList": [],
+             "changeTag": true,
+             "searchSource": false,
+             "dataType": [
+              "macro"
+             ],
+             "formId": 680,
+             "renderKey": "6801678623549283",
+             "saveWay": "macro",
+             "eventField": [
+              "device",
+              "gpio"
+             ],
+             "uuid": "TCFG_LED7_PIN3",
+             "emptyValue": "NO_CONFIG_PORT",
+             "defaultValue": "NO_CONFIG_PORT",
+             "originValue": "NO_CONFIG_PORT"
+            },
+            "__slot__": {
+             "options": [
+              {
+               "label": "IO_PORTA_00",
+               "value": "id_1647485267192_66"
+              },
+              {
+               "label": "IO_PORTA_01",
+               "value": "id_1647485267192_67"
+              },
+              {
+               "label": "IO_PORTA_02",
+               "value": "id_1647485267192_68"
+              },
+              {
+               "label": "IO_PORTA_03",
+               "value": "id_1647485267192_69"
+              },
+              {
+               "label": "IO_PORTA_04",
+               "value": "id_1647485267192_70"
+              },
+              {
+               "label": "IO_PORTA_05",
+               "value": "id_1647485267192_71"
+              },
+              {
+               "label": "IO_PORTA_06",
+               "value": "id_1647485267192_72"
+              },
+              {
+               "label": "IO_PORTB_00",
+               "value": "id_1647485267192_74"
+              },
+              {
+               "label": "IO_PORTB_01",
+               "value": "id_1647485267192_75"
+              },
+              {
+               "label": "IO_PORTB_02",
+               "value": "id_1647485267192_76"
+              },
+              {
+               "label": "IO_PORTB_03",
+               "value": "id_1647485267192_77"
+              },
+              {
+               "label": "IO_PORTB_04",
+               "value": "id_1647485267192_78"
+              },
+              {
+               "label": "IO_PORTB_05",
+               "value": "id_1647485267192_79"
+              },
+              {
+               "label": "IO_PORTB_06",
+               "value": "id_1647485267192_80"
+              },
+              {
+               "label": "IO_PORTB_07",
+               "value": "id_1647485267192_81"
+              },
+              {
+               "label": "IO_PORTB_08",
+               "value": "id_1659942520267_25"
+              },
+              {
+               "label": "IO_PORTB_09",
+               "value": "id_1659942416666_18"
+              },
+              {
+               "label": "IO_PORTB_10",
+               "value": "id_1659942417369_19"
+              },
+              {
+               "label": "IO_PORTB_11",
+               "value": "id_1659942418129_20"
+              },
+              {
+               "label": "IO_PORTC_00",
+               "value": "id_1647485267192_82"
+              },
+              {
+               "label": "IO_PORTC_01",
+               "value": "id_1647485267192_83"
+              },
+              {
+               "label": "IO_PORTC_02",
+               "value": "id_1647485267192_84"
+              },
+              {
+               "label": "IO_PORTC_03",
+               "value": "id_1647485267192_85"
+              },
+              {
+               "label": "IO_PORTC_04",
+               "value": "id_1647485267192_86"
+              },
+              {
+               "label": "IO_PORT_DM",
+               "value": "id_1651200854573_20"
+              },
+              {
+               "label": "IO_PORT_DP",
+               "value": "id_1651200840445_19"
+              },
+              {
+               "label": "IO_PORTF_00",
+               "value": "id_1708670662890_5"
+              },
+              {
+               "label": "IO_PORTF_01",
+               "value": "id_1708670490604_0"
+              },
+              {
+               "label": "IO_PORTF_02",
+               "value": "id_1708670648187_1"
+              },
+              {
+               "label": "IO_PORTF_03",
+               "value": "id_1708670652673_2"
+              },
+              {
+               "label": "IO_PORTF_04",
+               "value": "id_1708670655579_3"
+              },
+              {
+               "label": "IO_PORTF_05",
+               "value": "id_1708670659570_4"
+              },
+              {
+               "label": "IO_PORTP_00",
+               "value": "id_1743077011773_0"
+              },
+              {
+               "label": "IO_PORTP_01",
+               "value": "id_1743077060182_1"
+              },
+              {
+               "label": "IO_PORTP_02",
+               "value": "id_1743077061613_2"
+              },
+              {
+               "label": "NO_CONFIG_PORT",
+               "value": "id_1743405039177_0"
+              }
+             ]
+            },
+            "placeholder": "请选择LED引脚3",
+            "style": {
+             "width": "100%"
+            },
+            "clearable": true,
+            "disabled": false,
+            "filterable": false,
+            "multiple": false,
+            "id": "id_1678623549283_20",
+            "__vModel__": "field680",
+            "searchSource": true
+           }
+          ],
+          "eventField": []
+         },
+         "type": "default",
+         "justify": "start",
+         "align": "top",
+         "style": {
+          "height": "40px",
+          "paddingLeft": "0px"
+         },
+         "id": "id_1678623549283_18"
+        },
+        {
+         "__config__": {
+          "layout": "rowFormItem",
+          "tag": "group",
+          "tagIcon": "row",
+          "layoutTree": true,
+          "componentName": "row_681",
+          "enableUuid": "",
+          "showComponentName": false,
+          "dataType": [
+           "8",
+           "1"
+          ],
+          "template": "",
+          "span": 24,
+          "formId": 681,
+          "renderKey": "6811678623552168",
+          "children": [
+           {
+            "__config__": {
+             "label": "LED引脚4",
+             "showLabel": true,
+             "labelWidth": null,
+             "tag": "el-select",
+             "tagIcon": "select",
+             "layout": "colFormItem",
+             "span": 12,
+             "required": false,
+             "regList": [],
+             "changeTag": true,
+             "searchSource": false,
+             "dataType": [
+              "macro"
+             ],
+             "formId": 682,
+             "renderKey": "6821678623552168",
+             "saveWay": "macro",
+             "eventField": [
+              "device",
+              "gpio"
+             ],
+             "uuid": "TCFG_LED7_PIN4",
+             "emptyValue": "NO_CONFIG_PORT",
+             "defaultValue": "NO_CONFIG_PORT",
+             "originValue": "NO_CONFIG_PORT"
+            },
+            "__slot__": {
+             "options": [
+              {
+               "label": "IO_PORTA_00",
+               "value": "id_1647485267192_66"
+              },
+              {
+               "label": "IO_PORTA_01",
+               "value": "id_1647485267192_67"
+              },
+              {
+               "label": "IO_PORTA_02",
+               "value": "id_1647485267192_68"
+              },
+              {
+               "label": "IO_PORTA_03",
+               "value": "id_1647485267192_69"
+              },
+              {
+               "label": "IO_PORTA_04",
+               "value": "id_1647485267192_70"
+              },
+              {
+               "label": "IO_PORTA_05",
+               "value": "id_1647485267192_71"
+              },
+              {
+               "label": "IO_PORTA_06",
+               "value": "id_1647485267192_72"
+              },
+              {
+               "label": "IO_PORTB_00",
+               "value": "id_1647485267192_74"
+              },
+              {
+               "label": "IO_PORTB_01",
+               "value": "id_1647485267192_75"
+              },
+              {
+               "label": "IO_PORTB_02",
+               "value": "id_1647485267192_76"
+              },
+              {
+               "label": "IO_PORTB_03",
+               "value": "id_1647485267192_77"
+              },
+              {
+               "label": "IO_PORTB_04",
+               "value": "id_1647485267192_78"
+              },
+              {
+               "label": "IO_PORTB_05",
+               "value": "id_1647485267192_79"
+              },
+              {
+               "label": "IO_PORTB_06",
+               "value": "id_1647485267192_80"
+              },
+              {
+               "label": "IO_PORTB_07",
+               "value": "id_1647485267192_81"
+              },
+              {
+               "label": "IO_PORTB_08",
+               "value": "id_1659942520267_25"
+              },
+              {
+               "label": "IO_PORTB_09",
+               "value": "id_1659942416666_18"
+              },
+              {
+               "label": "IO_PORTB_10",
+               "value": "id_1659942417369_19"
+              },
+              {
+               "label": "IO_PORTB_11",
+               "value": "id_1659942418129_20"
+              },
+              {
+               "label": "IO_PORTC_00",
+               "value": "id_1647485267192_82"
+              },
+              {
+               "label": "IO_PORTC_01",
+               "value": "id_1647485267192_83"
+              },
+              {
+               "label": "IO_PORTC_02",
+               "value": "id_1647485267192_84"
+              },
+              {
+               "label": "IO_PORTC_03",
+               "value": "id_1647485267192_85"
+              },
+              {
+               "label": "IO_PORTC_04",
+               "value": "id_1647485267192_86"
+              },
+              {
+               "label": "IO_PORT_DM",
+               "value": "id_1651200854573_20"
+              },
+              {
+               "label": "IO_PORT_DP",
+               "value": "id_1651200840445_19"
+              },
+              {
+               "label": "IO_PORTF_00",
+               "value": "id_1708670662890_5"
+              },
+              {
+               "label": "IO_PORTF_01",
+               "value": "id_1708670490604_0"
+              },
+              {
+               "label": "IO_PORTF_02",
+               "value": "id_1708670648187_1"
+              },
+              {
+               "label": "IO_PORTF_03",
+               "value": "id_1708670652673_2"
+              },
+              {
+               "label": "IO_PORTF_04",
+               "value": "id_1708670655579_3"
+              },
+              {
+               "label": "IO_PORTF_05",
+               "value": "id_1708670659570_4"
+              },
+              {
+               "label": "IO_PORTP_00",
+               "value": "id_1743077011773_0"
+              },
+              {
+               "label": "IO_PORTP_01",
+               "value": "id_1743077060182_1"
+              },
+              {
+               "label": "IO_PORTP_02",
+               "value": "id_1743077061613_2"
+              },
+              {
+               "label": "NO_CONFIG_PORT",
+               "value": "id_1743405039177_0"
+              }
+             ]
+            },
+            "placeholder": "请选择LED引脚4",
+            "style": {
+             "width": "100%"
+            },
+            "clearable": true,
+            "disabled": false,
+            "filterable": false,
+            "multiple": false,
+            "id": "id_1678623552168_22",
+            "__vModel__": "field682",
+            "searchSource": true
+           },
+           {
+            "__config__": {
+             "label": "LED引脚5",
+             "showLabel": true,
+             "labelWidth": null,
+             "tag": "el-select",
+             "tagIcon": "select",
+             "layout": "colFormItem",
+             "span": 12,
+             "required": false,
+             "regList": [],
+             "changeTag": true,
+             "searchSource": false,
+             "dataType": [
+              "macro"
+             ],
+             "formId": 683,
+             "renderKey": "6831678623552168",
+             "saveWay": "macro",
+             "eventField": [
+              "device",
+              "gpio"
+             ],
+             "uuid": "TCFG_LED7_PIN5",
+             "emptyValue": "NO_CONFIG_PORT",
+             "defaultValue": "NO_CONFIG_PORT",
+             "originValue": "NO_CONFIG_PORT"
+            },
+            "__slot__": {
+             "options": [
+              {
+               "label": "IO_PORTA_00",
+               "value": "id_1647485267192_66"
+              },
+              {
+               "label": "IO_PORTA_01",
+               "value": "id_1647485267192_67"
+              },
+              {
+               "label": "IO_PORTA_02",
+               "value": "id_1647485267192_68"
+              },
+              {
+               "label": "IO_PORTA_03",
+               "value": "id_1647485267192_69"
+              },
+              {
+               "label": "IO_PORTA_04",
+               "value": "id_1647485267192_70"
+              },
+              {
+               "label": "IO_PORTA_05",
+               "value": "id_1647485267192_71"
+              },
+              {
+               "label": "IO_PORTA_06",
+               "value": "id_1647485267192_72"
+              },
+              {
+               "label": "IO_PORTB_00",
+               "value": "id_1647485267192_74"
+              },
+              {
+               "label": "IO_PORTB_01",
+               "value": "id_1647485267192_75"
+              },
+              {
+               "label": "IO_PORTB_02",
+               "value": "id_1647485267192_76"
+              },
+              {
+               "label": "IO_PORTB_03",
+               "value": "id_1647485267192_77"
+              },
+              {
+               "label": "IO_PORTB_04",
+               "value": "id_1647485267192_78"
+              },
+              {
+               "label": "IO_PORTB_05",
+               "value": "id_1647485267192_79"
+              },
+              {
+               "label": "IO_PORTB_06",
+               "value": "id_1647485267192_80"
+              },
+              {
+               "label": "IO_PORTB_07",
+               "value": "id_1647485267192_81"
+              },
+              {
+               "label": "IO_PORTB_08",
+               "value": "id_1659942520267_25"
+              },
+              {
+               "label": "IO_PORTB_09",
+               "value": "id_1659942416666_18"
+              },
+              {
+               "label": "IO_PORTB_10",
+               "value": "id_1659942417369_19"
+              },
+              {
+               "label": "IO_PORTB_11",
+               "value": "id_1659942418129_20"
+              },
+              {
+               "label": "IO_PORTC_00",
+               "value": "id_1647485267192_82"
+              },
+              {
+               "label": "IO_PORTC_01",
+               "value": "id_1647485267192_83"
+              },
+              {
+               "label": "IO_PORTC_02",
+               "value": "id_1647485267192_84"
+              },
+              {
+               "label": "IO_PORTC_03",
+               "value": "id_1647485267192_85"
+              },
+              {
+               "label": "IO_PORTC_04",
+               "value": "id_1647485267192_86"
+              },
+              {
+               "label": "IO_PORT_DM",
+               "value": "id_1651200854573_20"
+              },
+              {
+               "label": "IO_PORT_DP",
+               "value": "id_1651200840445_19"
+              },
+              {
+               "label": "IO_PORTF_00",
+               "value": "id_1708670662890_5"
+              },
+              {
+               "label": "IO_PORTF_01",
+               "value": "id_1708670490604_0"
+              },
+              {
+               "label": "IO_PORTF_02",
+               "value": "id_1708670648187_1"
+              },
+              {
+               "label": "IO_PORTF_03",
+               "value": "id_1708670652673_2"
+              },
+              {
+               "label": "IO_PORTF_04",
+               "value": "id_1708670655579_3"
+              },
+              {
+               "label": "IO_PORTF_05",
+               "value": "id_1708670659570_4"
+              },
+              {
+               "label": "IO_PORTP_00",
+               "value": "id_1743077011773_0"
+              },
+              {
+               "label": "IO_PORTP_01",
+               "value": "id_1743077060182_1"
+              },
+              {
+               "label": "IO_PORTP_02",
+               "value": "id_1743077061613_2"
+              },
+              {
+               "label": "NO_CONFIG_PORT",
+               "value": "id_1743405039177_0"
+              }
+             ]
+            },
+            "placeholder": "请选择LED引脚5",
+            "style": {
+             "width": "100%"
+            },
+            "clearable": true,
+            "disabled": false,
+            "filterable": false,
+            "multiple": false,
+            "id": "id_1678623552168_23",
+            "__vModel__": "field683",
+            "searchSource": true
+           }
+          ],
+          "eventField": []
+         },
+         "type": "default",
+         "justify": "start",
+         "align": "top",
+         "style": {
+          "height": "40px",
+          "paddingLeft": "0px"
+         },
+         "id": "id_1678623552168_21"
+        },
+        {
+         "__config__": {
+          "layout": "rowFormItem",
+          "tag": "group",
+          "tagIcon": "row",
+          "layoutTree": true,
+          "componentName": "row_684",
+          "enableUuid": "",
+          "showComponentName": false,
+          "dataType": [
+           "8",
+           "1"
+          ],
+          "template": "",
+          "span": 24,
+          "formId": 684,
+          "renderKey": "6841678623556356",
+          "children": [
+           {
+            "__config__": {
+             "label": "LED引脚6",
+             "showLabel": true,
+             "labelWidth": null,
+             "tag": "el-select",
+             "tagIcon": "select",
+             "layout": "colFormItem",
+             "span": 12,
+             "required": false,
+             "regList": [],
+             "changeTag": true,
+             "searchSource": false,
+             "dataType": [
+              "macro"
+             ],
+             "formId": 685,
+             "renderKey": "6851678623556356",
+             "saveWay": "macro",
+             "eventField": [
+              "device",
+              "gpio"
+             ],
+             "uuid": "TCFG_LED7_PIN6",
+             "emptyValue": "NO_CONFIG_PORT",
+             "defaultValue": "NO_CONFIG_PORT",
+             "originValue": "NO_CONFIG_PORT"
+            },
+            "__slot__": {
+             "options": [
+              {
+               "label": "IO_PORTA_00",
+               "value": "id_1647485267192_66"
+              },
+              {
+               "label": "IO_PORTA_01",
+               "value": "id_1647485267192_67"
+              },
+              {
+               "label": "IO_PORTA_02",
+               "value": "id_1647485267192_68"
+              },
+              {
+               "label": "IO_PORTA_03",
+               "value": "id_1647485267192_69"
+              },
+              {
+               "label": "IO_PORTA_04",
+               "value": "id_1647485267192_70"
+              },
+              {
+               "label": "IO_PORTA_05",
+               "value": "id_1647485267192_71"
+              },
+              {
+               "label": "IO_PORTA_06",
+               "value": "id_1647485267192_72"
+              },
+              {
+               "label": "IO_PORTB_00",
+               "value": "id_1647485267192_74"
+              },
+              {
+               "label": "IO_PORTB_01",
+               "value": "id_1647485267192_75"
+              },
+              {
+               "label": "IO_PORTB_02",
+               "value": "id_1647485267192_76"
+              },
+              {
+               "label": "IO_PORTB_03",
+               "value": "id_1647485267192_77"
+              },
+              {
+               "label": "IO_PORTB_04",
+               "value": "id_1647485267192_78"
+              },
+              {
+               "label": "IO_PORTB_05",
+               "value": "id_1647485267192_79"
+              },
+              {
+               "label": "IO_PORTB_06",
+               "value": "id_1647485267192_80"
+              },
+              {
+               "label": "IO_PORTB_07",
+               "value": "id_1647485267192_81"
+              },
+              {
+               "label": "IO_PORTB_08",
+               "value": "id_1659942520267_25"
+              },
+              {
+               "label": "IO_PORTB_09",
+               "value": "id_1659942416666_18"
+              },
+              {
+               "label": "IO_PORTB_10",
+               "value": "id_1659942417369_19"
+              },
+              {
+               "label": "IO_PORTB_11",
+               "value": "id_1659942418129_20"
+              },
+              {
+               "label": "IO_PORTC_00",
+               "value": "id_1647485267192_82"
+              },
+              {
+               "label": "IO_PORTC_01",
+               "value": "id_1647485267192_83"
+              },
+              {
+               "label": "IO_PORTC_02",
+               "value": "id_1647485267192_84"
+              },
+              {
+               "label": "IO_PORTC_03",
+               "value": "id_1647485267192_85"
+              },
+              {
+               "label": "IO_PORTC_04",
+               "value": "id_1647485267192_86"
+              },
+              {
+               "label": "IO_PORT_DM",
+               "value": "id_1651200854573_20"
+              },
+              {
+               "label": "IO_PORT_DP",
+               "value": "id_1651200840445_19"
+              },
+              {
+               "label": "IO_PORTF_00",
+               "value": "id_1708670662890_5"
+              },
+              {
+               "label": "IO_PORTF_01",
+               "value": "id_1708670490604_0"
+              },
+              {
+               "label": "IO_PORTF_02",
+               "value": "id_1708670648187_1"
+              },
+              {
+               "label": "IO_PORTF_03",
+               "value": "id_1708670652673_2"
+              },
+              {
+               "label": "IO_PORTF_04",
+               "value": "id_1708670655579_3"
+              },
+              {
+               "label": "IO_PORTF_05",
+               "value": "id_1708670659570_4"
+              },
+              {
+               "label": "IO_PORTP_00",
+               "value": "id_1743077011773_0"
+              },
+              {
+               "label": "IO_PORTP_01",
+               "value": "id_1743077060182_1"
+              },
+              {
+               "label": "IO_PORTP_02",
+               "value": "id_1743077061613_2"
+              },
+              {
+               "label": "NO_CONFIG_PORT",
+               "value": "id_1743405039177_0"
+              }
+             ]
+            },
+            "placeholder": "请选择LED引脚6",
+            "style": {
+             "width": "100%"
+            },
+            "clearable": true,
+            "disabled": false,
+            "filterable": false,
+            "multiple": false,
+            "id": "id_1678623556356_25",
+            "__vModel__": "field685",
+            "searchSource": true
+           }
+          ],
+          "eventField": []
+         },
+         "type": "default",
+         "justify": "start",
+         "align": "top",
+         "style": {
+          "height": "40px",
+          "paddingLeft": "0px"
+         },
+         "id": "id_1678623556356_24"
+        }
+       ],
+       "eventField": []
+      },
+      "type": "default",
+      "justify": "start",
+      "align": "top",
+      "style": {
+       "height": "40px",
+       "paddingLeft": "0px"
+      },
+      "id": "id_1678623647935_27"
+     }
+    ],
+    "eventField": [],
+    "disable": true
+   },
+   "type": "default",
+   "justify": "start",
+   "align": "top",
+   "style": {
+    "height": "70px",
+    "paddingLeft": "0px"
+   },
+   "id": "id_1678622212458_0"
+  }
+ ],
+ "formName": "选项卡名称",
+ "formRef": "elForm",
+ "formModel": "formData",
+ "size": "small",
+ "labelPosition": "right",
+ "labelWidth": 100,
+ "formRules": "rules",
+ "gutter": 15,
+ "disabled": false,
+ "span": 12,
+ "formBtns": false,
+ "maxFormId": 472,
+ "version": {
+  "code": 1,
+  "tool": "4.4.0"
+ }
+}

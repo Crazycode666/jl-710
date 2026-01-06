@@ -1,0 +1,670 @@
+{
+  "fields": [
+    {
+      "__config__": {
+        "layout": "rowFormItem",
+        "tag": "group",
+        "tagIcon": "row",
+        "layoutTree": true,
+        "componentName": "APP模式配置",
+        "enableUuid": "",
+        "showComponentName": true,
+        "dataType": [
+          "8",
+          "1"
+        ],
+        "template": "",
+        "span": 24,
+        "formId": 101,
+        "renderKey": "1011675221888158",
+        "children": [
+          {
+            "__config__": {
+              "label": "无线mic模式",
+              "tag": "el-switch",
+              "tagIcon": "switch",
+              "defaultValue": 1,
+              "span": 4,
+              "showLabel": true,
+              "labelWidth": null,
+              "layout": "colFormItem",
+              "required": false,
+              "regList": [],
+              "changeTag": true,
+              "dataType": [
+                "8",
+                "1"
+              ],
+              "formId": 162,
+              "renderKey": "1621688214753243",
+              "originValue": 0,
+              "saveWay": "macro",
+              "uuid": "TCFG_AUDIO_MIC_ENABLE",
+              "eventField": []
+            },
+            "style": {},
+            "disabled": true,
+            "active-text": "",
+            "inactive-text": "",
+            "active-color": null,
+            "inactive-color": null,
+            "active-value": 1,
+            "inactive-value": 0,
+            "id": "id_1694249791169_0",
+            "__vModel__": "field162"
+          }
+        ],
+        "eventField": []
+      },
+      "type": "default",
+      "justify": "start",
+      "align": "top",
+      "style": {
+        "height": "70px",
+        "paddingLeft": "0px"
+      },
+      "id": "id_1675221888158_0"
+    },
+    {
+      "__config__": {
+        "layout": "rowFormItem",
+        "tag": "group",
+        "tagIcon": "row",
+        "layoutTree": true,
+        "componentName": "固定时钟频率",
+        "enableUuid": "",
+        "showComponentName": true,
+        "dataType": [
+          "8",
+          "1"
+        ],
+        "template": "",
+        "span": 24,
+        "formId": 148,
+        "renderKey": "1481711962040107",
+        "children": [
+          {
+            "__config__": {
+              "label": "固定时钟频率",
+              "showLabel": true,
+              "labelWidth": null,
+              "tag": "el-select",
+              "tagIcon": "select",
+              "layout": "colFormItem",
+              "span": 8,
+              "required": false,
+              "defaultValue": 240000000,
+              "regList": [],
+              "changeTag": true,
+              "searchSource": false,
+              "status": 0,
+              "dataType": [
+                "32",
+                "1"
+              ],
+              "formId": 150,
+              "renderKey": "1501711962198185",
+              "saveWay": "macro",
+              "uuid": "TCFG_FIX_CLOCK_FREQ",
+              "originValue": 240000000,
+              "eventField": []
+            },
+            "__slot__": {
+              "options": [
+                {
+                  "label": "48MHz",
+                  "value": 48000000,
+                  "hide": false,
+                  "disabled": false
+                },
+                {
+                  "label": "96MHz",
+                  "value": 96000000,
+                  "hide": false,
+                  "disabled": false
+                },
+                {
+                  "label": "128MHz",
+                  "value": 128000000,
+                  "hide": false,
+                  "disabled": false
+                },
+                {
+                  "label": "160MHz",
+                  "value": 160000000,
+                  "hide": false,
+                  "disabled": false
+                },
+                {
+                  "label": "192MHz",
+                  "value": 192000000,
+                  "hide": false,
+                  "disabled": false
+                },
+                {
+                  "label": "240MHz",
+                  "value": 240000000,
+                  "hide": false,
+                  "disabled": false
+                },
+                {
+                  "label": "自适应",
+                  "value": 0,
+                  "hide": false,
+                  "disabled": false
+                }
+              ]
+            },
+            "placeholder": "请选择固定时钟频率",
+            "style": {
+              "width": "100%"
+            },
+            "clearable": false,
+            "disabled": false,
+            "filterable": false,
+            "multiple": false,
+            "id": "id_1711962198185_2",
+            "__vModel__": "field150"
+          }
+        ],
+        "eventField": []
+      },
+      "type": "default",
+      "justify": "start",
+      "align": "top",
+      "style": {
+        "height": "70px",
+        "paddingLeft": "0px"
+      },
+      "id": "id_1711962040107_0"
+    },
+    {
+      "__config__": {
+        "layout": "rowFormItem",
+        "tag": "group",
+        "tagIcon": "row",
+        "layoutTree": true,
+        "componentName": "串口通讯",
+        "enableUuid": "TCFG_USER_UART_DEMO_EN",
+        "showComponentName": true,
+        "dataType": [
+          "8",
+          "1"
+        ],
+        "status": 0,
+        "template": "",
+        "hideAddTemplate": false,
+        "span": 24,
+        "formId": 200,
+        "renderKey": "2001748502230567",
+        "children": [
+          {
+            "__config__": {
+              "label": "发送引脚",
+              "showLabel": true,
+              "labelWidth": null,
+              "tag": "el-select",
+              "tagIcon": "select",
+              "layout": "colFormItem",
+              "span": 6,
+              "required": false,
+              "defaultValue": "id_1647485267192_83",
+              "regList": [],
+              "changeTag": true,
+              "searchSource": false,
+              "status": 0,
+              "dataType": [
+                "macro"
+              ],
+              "formId": 201,
+              "renderKey": "2011748503484813",
+              "eventField": [
+                "device",
+                "gpio"
+              ],
+              "saveWay": "macro",
+              "uuid": "UART_DEMO_TX_PIN"
+            },
+            "__slot__": {
+              "options": [
+                {
+                  "label": "IO_PORTA_00",
+                  "value": "id_1647485267192_66"
+                },
+                {
+                  "label": "IO_PORTA_01",
+                  "value": "id_1647485267192_67"
+                },
+                {
+                  "label": "IO_PORTA_02",
+                  "value": "id_1647485267192_68"
+                },
+                {
+                  "label": "IO_PORTA_03",
+                  "value": "id_1647485267192_69"
+                },
+                {
+                  "label": "IO_PORTA_04",
+                  "value": "id_1647485267192_70"
+                },
+                {
+                  "label": "IO_PORTA_05",
+                  "value": "id_1647485267192_71"
+                },
+                {
+                  "label": "IO_PORTA_06",
+                  "value": "id_1647485267192_72"
+                },
+                {
+                  "label": "IO_PORTB_00",
+                  "value": "id_1647485267192_74"
+                },
+                {
+                  "label": "IO_PORTB_01",
+                  "value": "id_1647485267192_75"
+                },
+                {
+                  "label": "IO_PORTB_02",
+                  "value": "id_1647485267192_76"
+                },
+                {
+                  "label": "IO_PORTB_03",
+                  "value": "id_1647485267192_77"
+                },
+                {
+                  "label": "IO_PORTB_04",
+                  "value": "id_1647485267192_78"
+                },
+                {
+                  "label": "IO_PORTB_05",
+                  "value": "id_1647485267192_79"
+                },
+                {
+                  "label": "IO_PORTB_06",
+                  "value": "id_1647485267192_80"
+                },
+                {
+                  "label": "IO_PORTB_07",
+                  "value": "id_1647485267192_81"
+                },
+                {
+                  "label": "IO_PORTB_08",
+                  "value": "id_1659942520267_25"
+                },
+                {
+                  "label": "IO_PORTB_09",
+                  "value": "id_1659942416666_18"
+                },
+                {
+                  "label": "IO_PORTB_10",
+                  "value": "id_1659942417369_19"
+                },
+                {
+                  "label": "IO_PORTB_11",
+                  "value": "id_1659942418129_20"
+                },
+                {
+                  "label": "IO_PORTC_00",
+                  "value": "id_1647485267192_82"
+                },
+                {
+                  "label": "IO_PORTC_01",
+                  "value": "id_1647485267192_83"
+                },
+                {
+                  "label": "IO_PORTC_02",
+                  "value": "id_1647485267192_84"
+                },
+                {
+                  "label": "IO_PORTC_03",
+                  "value": "id_1647485267192_85"
+                },
+                {
+                  "label": "IO_PORTC_04",
+                  "value": "id_1647485267192_86"
+                },
+                {
+                  "label": "IO_PORT_DM",
+                  "value": "id_1651200854573_20"
+                },
+                {
+                  "label": "IO_PORT_DP",
+                  "value": "id_1651200840445_19"
+                },
+                {
+                  "label": "IO_PORTF_00",
+                  "value": "id_1708670662890_5"
+                },
+                {
+                  "label": "IO_PORTF_01",
+                  "value": "id_1708670490604_0"
+                },
+                {
+                  "label": "IO_PORTF_02",
+                  "value": "id_1708670648187_1"
+                },
+                {
+                  "label": "IO_PORTF_03",
+                  "value": "id_1708670652673_2"
+                },
+                {
+                  "label": "IO_PORTF_04",
+                  "value": "id_1708670655579_3"
+                },
+                {
+                  "label": "IO_PORTF_05",
+                  "value": "id_1708670659570_4"
+                },
+                {
+                  "label": "IO_PORTP_00",
+                  "value": "id_1743077011773_0"
+                },
+                {
+                  "label": "IO_PORTP_01",
+                  "value": "id_1743077060182_1"
+                },
+                {
+                  "label": "IO_PORTP_02",
+                  "value": "id_1743077061613_2"
+                },
+                {
+                  "label": "NO_CONFIG_PORT",
+                  "value": "id_1743405039177_0"
+                }
+              ]
+            },
+            "placeholder": "请选择发送引脚",
+            "style": {
+              "width": "100%"
+            },
+            "clearable": false,
+            "disabled": false,
+            "filterable": false,
+            "multiple": false,
+            "id": "id_1748503484813_1",
+            "__vModel__": "field201",
+            "searchSource": true
+          },
+          {
+            "__config__": {
+              "label": "接收引脚",
+              "showLabel": true,
+              "labelWidth": null,
+              "tag": "el-select",
+              "tagIcon": "select",
+              "layout": "colFormItem",
+              "span": 6,
+              "required": false,
+              "defaultValue": "id_1647485267192_83",
+              "regList": [],
+              "changeTag": true,
+              "searchSource": false,
+              "status": 0,
+              "dataType": [
+                "macro"
+              ],
+              "formId": 200,
+              "renderKey": "2001748503591900",
+              "eventField": [
+                "device",
+                "gpio"
+              ],
+              "saveWay": "macro",
+              "uuid": "UART_DEMO_RX_PIN"
+            },
+            "__slot__": {
+              "options": [
+                {
+                  "label": "IO_PORTA_00",
+                  "value": "id_1647485267192_66"
+                },
+                {
+                  "label": "IO_PORTA_01",
+                  "value": "id_1647485267192_67"
+                },
+                {
+                  "label": "IO_PORTA_02",
+                  "value": "id_1647485267192_68"
+                },
+                {
+                  "label": "IO_PORTA_03",
+                  "value": "id_1647485267192_69"
+                },
+                {
+                  "label": "IO_PORTA_04",
+                  "value": "id_1647485267192_70"
+                },
+                {
+                  "label": "IO_PORTA_05",
+                  "value": "id_1647485267192_71"
+                },
+                {
+                  "label": "IO_PORTA_06",
+                  "value": "id_1647485267192_72"
+                },
+                {
+                  "label": "IO_PORTB_00",
+                  "value": "id_1647485267192_74"
+                },
+                {
+                  "label": "IO_PORTB_01",
+                  "value": "id_1647485267192_75"
+                },
+                {
+                  "label": "IO_PORTB_02",
+                  "value": "id_1647485267192_76"
+                },
+                {
+                  "label": "IO_PORTB_03",
+                  "value": "id_1647485267192_77"
+                },
+                {
+                  "label": "IO_PORTB_04",
+                  "value": "id_1647485267192_78"
+                },
+                {
+                  "label": "IO_PORTB_05",
+                  "value": "id_1647485267192_79"
+                },
+                {
+                  "label": "IO_PORTB_06",
+                  "value": "id_1647485267192_80"
+                },
+                {
+                  "label": "IO_PORTB_07",
+                  "value": "id_1647485267192_81"
+                },
+                {
+                  "label": "IO_PORTB_08",
+                  "value": "id_1659942520267_25"
+                },
+                {
+                  "label": "IO_PORTB_09",
+                  "value": "id_1659942416666_18"
+                },
+                {
+                  "label": "IO_PORTB_10",
+                  "value": "id_1659942417369_19"
+                },
+                {
+                  "label": "IO_PORTB_11",
+                  "value": "id_1659942418129_20"
+                },
+                {
+                  "label": "IO_PORTC_00",
+                  "value": "id_1647485267192_82"
+                },
+                {
+                  "label": "IO_PORTC_01",
+                  "value": "id_1647485267192_83"
+                },
+                {
+                  "label": "IO_PORTC_02",
+                  "value": "id_1647485267192_84"
+                },
+                {
+                  "label": "IO_PORTC_03",
+                  "value": "id_1647485267192_85"
+                },
+                {
+                  "label": "IO_PORTC_04",
+                  "value": "id_1647485267192_86"
+                },
+                {
+                  "label": "IO_PORT_DM",
+                  "value": "id_1651200854573_20"
+                },
+                {
+                  "label": "IO_PORT_DP",
+                  "value": "id_1651200840445_19"
+                },
+                {
+                  "label": "IO_PORTF_00",
+                  "value": "id_1708670662890_5"
+                },
+                {
+                  "label": "IO_PORTF_01",
+                  "value": "id_1708670490604_0"
+                },
+                {
+                  "label": "IO_PORTF_02",
+                  "value": "id_1708670648187_1"
+                },
+                {
+                  "label": "IO_PORTF_03",
+                  "value": "id_1708670652673_2"
+                },
+                {
+                  "label": "IO_PORTF_04",
+                  "value": "id_1708670655579_3"
+                },
+                {
+                  "label": "IO_PORTF_05",
+                  "value": "id_1708670659570_4"
+                },
+                {
+                  "label": "IO_PORTP_00",
+                  "value": "id_1743077011773_0"
+                },
+                {
+                  "label": "IO_PORTP_01",
+                  "value": "id_1743077060182_1"
+                },
+                {
+                  "label": "IO_PORTP_02",
+                  "value": "id_1743077061613_2"
+                },
+                {
+                  "label": "NO_CONFIG_PORT",
+                  "value": "id_1743405039177_0"
+                }
+              ]
+            },
+            "placeholder": "请选择接收引脚",
+            "style": {
+              "width": "100%"
+            },
+            "clearable": false,
+            "disabled": false,
+            "filterable": false,
+            "multiple": false,
+            "id": "id_1748503591900_2",
+            "__vModel__": "field200",
+            "searchSource": true
+          },
+          {
+            "__config__": {
+              "label": "波特率",
+              "showLabel": true,
+              "changeTag": true,
+              "labelWidth": null,
+              "tag": "el-input-number",
+              "tagIcon": "number",
+              "defaultValue": 115200,
+              "span": 6,
+              "layout": "colFormItem",
+              "required": false,
+              "regList": [],
+              "status": 0,
+              "dataType": [
+                "32",
+                "-1"
+              ],
+              "formId": 201,
+              "renderKey": "2011748503607203",
+              "originValue": 115200,
+              "uuid": "USER_UART_DEMO_BAUD",
+              "saveWay": "macro",
+              "eventField": []
+            },
+            "placeholder": "波特率",
+            "step": 1,
+            "step-strictly": false,
+            "controls-position": "",
+            "disabled": false,
+            "id": "id_1748503607203_3",
+            "__vModel__": "field201"
+          },
+          {
+            "__config__": {
+              "label": "传输数据长度",
+              "showLabel": true,
+              "changeTag": true,
+              "labelWidth": null,
+              "tag": "el-input-number",
+              "tagIcon": "number",
+              "defaultValue": 32,
+              "span": 6,
+              "layout": "colFormItem",
+              "required": false,
+              "regList": [],
+              "status": 0,
+              "dataType": [
+                "32",
+                "-1"
+              ],
+              "formId": 200,
+              "renderKey": "2001748503656786",
+              "originValue": 32,
+              "eventField": [],
+              "saveWay": "macro",
+              "uuid": "UART_DEMO_RX_BUF_SIZE"
+            },
+            "placeholder": "传输数据长度",
+            "step": 1,
+            "step-strictly": false,
+            "controls-position": "",
+            "disabled": false,
+            "id": "id_1748503656786_4",
+            "__vModel__": "field200"
+          }
+        ],
+        "eventField": [],
+        "tip": "发送引脚和接收引脚配置为同一个IO为单线串口通讯",
+        "tipAlways": true,
+        "disable": true
+      },
+      "type": "default",
+      "justify": "start",
+      "align": "top",
+      "style": {
+        "height": "40px",
+        "paddingLeft": "0px"
+      },
+      "id": "id_1748502230567_0"
+    }
+  ],
+  "formName": "蓝牙配置",
+  "formRef": "elForm",
+  "formModel": "formData",
+  "size": "small",
+  "labelPosition": "left",
+  "labelWidth": 100,
+  "formRules": "rules",
+  "gutter": 30,
+  "disabled": false,
+  "span": 6,
+  "formBtns": false,
+  "unFocusedComponentBorder": false,
+  "maxFormId": 306
+}

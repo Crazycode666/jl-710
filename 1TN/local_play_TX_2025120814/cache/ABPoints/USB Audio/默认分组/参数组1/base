@@ -1,0 +1,139 @@
+[
+ {
+  "node": "a47e950c-4a6c-4e3a-a7ad-2aa0cccb5255",
+  "parentTab": "id_1694144986737_0",
+  "group": 1694144961188,
+  "mode": {
+   "current": "arg0",
+   "bypass": false,
+   "list": [
+    {
+     "name": "arg0",
+     "data": [
+      {
+       "id": "id_1678246329785_3",
+       "list": [
+        {
+         "id": "id_1677140583268_0",
+         "value": 10
+        },
+        {
+         "id": "id_1677144866465_6",
+         "value": 100
+        },
+        {
+         "id": "id_1719387029771_0",
+         "value": 0
+        }
+       ]
+      }
+     ],
+     "enable": true,
+     "bypass": false
+    }
+   ],
+   "name": "config3973914"
+  }
+ },
+ {
+  "node": "b0d3e280-0231-471a-b361-3d2da29f7f2f",
+  "parentTab": "id_1694144986737_0",
+  "group": 1694144961188,
+  "mode": {
+   "current": "arg0",
+   "bypass": false,
+   "list": [
+    {
+     "name": "arg0",
+     "data": [
+      {
+       "id": "id_1676447331464_3",
+       "list": [
+        {
+         "id": "id_1681280938229_0",
+         "value": 0
+        },
+        {
+         "id": "id_1676447481291_4",
+         "value": 100
+        },
+        {
+         "id": "id_1676447941026_6",
+         "value": -45
+        },
+        {
+         "id": "id_1678088452701_0",
+         "value": 1
+        },
+        {
+         "id": "id_1677290960342_0",
+         "value": 0
+        },
+        {
+         "id": "id_1690535811640_0",
+         "value": 16
+        },
+        {
+         "id": "id_1676801188975_0",
+         "value": 16
+        }
+       ]
+      },
+      {
+       "id": "id_1677751149521_1",
+       "list": []
+      }
+     ],
+     "enable": true,
+     "bypass": false
+    }
+   ],
+   "name": "Vol_PcspkMusic"
+  }
+ },
+ {
+  "node": "397a55d0-c05d-44e4-86cb-709004147a70",
+  "parentTab": "id_1694144986737_0",
+  "group": 1694144961188,
+  "mode": {
+   "current": "",
+   "bypass": false,
+   "list": [
+    {
+     "name": "arg0",
+     "data": [
+      {
+       "id": "id_1678246329785_2",
+       "list": [
+        {
+         "id": "id_1677642341249_0",
+         "value": 50
+        },
+        {
+         "id": "id_1677642343355_1",
+         "value": 8
+        },
+        {
+         "id": "id_1677642344547_2",
+         "value": 0
+        }
+       ]
+      },
+      {
+       "id": "id_1702378606977_0",
+       "list": [
+        {
+         "id": "id_1693469084872_1",
+         "value": 0
+        }
+       ],
+       "expand": 1
+      }
+     ],
+     "enable": true
+    }
+   ],
+   "name": "DAC3"
+  }
+ }
+]

@@ -1,0 +1,10 @@
+# 授权FAQ（Licensing）
+
+## APLC License
+---
+
+- **授权说明**
+    - APLC属于官方提供的算法，产品端使用的时候，需要获取授权
+- **授权方式**
+    - 发邮件给负责人：kurt.zou@iis-extern.fraunhofer.de
+    - 或者访问[🔗官网Fraunhofer IIS](https://www.iis.fraunhofer.de/zh.html)获取**联系方式**

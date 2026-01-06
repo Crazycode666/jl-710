@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2.1. DAC配置 &mdash; JL Project Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="https://doc.zh-jieli.com/static/css/custom.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=fa47ad08"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="https://doc.zh-jieli.com/static/js/custom.js"></script>
+      <script src="../../_static/js/custom.js?v=bfa33168"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2.2. ADC配置" href="ADC_cfg.html" />
+    <link rel="prev" title="2. 音频配置" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html">
+            
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">SDK入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">1. 技术框架</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/index.html">2. 快速入门</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">主要功能介绍</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../wireless_mic/index.html">1. SDK 详细介绍</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">系统功能进阶</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../driver/index.html">1. 外设驱动</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../driver/pmu/index.html">2. 电源管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../key_config/index.html">3. 按键配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pwm_led/index.html">4. LED状态显示</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system/file_system/index.html">5. 文件系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system/os/index.html">6. 操作系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev_manager/index.html">7. 设备管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system/%E9%80%9A%E7%94%A8%E7%BB%84%E4%BB%B6/index.html">8. 通用组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system/report/index.html">9. 系统状态报告</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system/resource_manage/index.html">10. 资源管理帮助</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">蓝牙功能进阶</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../bt/btstack/index.html">1. 蓝牙协议栈</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bt/ble/index.html">2. BLE开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bt/FindMy/FindMy.html">3. FindMy</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">音频功能进阶</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../audio/index.html">1. 音频播放</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. 音频配置</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.1. DAC配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">2.1.1. 音频配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">2.1.1.1. 声道配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">2.1.1.2. 输出方式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">2.1.1.3. 轻量关闭</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">2.1.1.4. 性能模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vcm">2.1.1.5. VCM电容</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">2.1.1.6. DAC开启模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ms">2.1.1.7. 缓冲长度(ms)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#analog-gain">2.1.1.8. Analog Gain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">2.1.1.9. 音量增强配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">2.1.1.10. 电流档位配置</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#dac-io">2.1.2. DAC_IO 配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id9">2.1.2.1. 使能配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">2.1.2.2. 接口参数配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">2.1.2.3. 注意事项</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ADC_cfg.html">2.2. ADC配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mic_capless_manual.html">2.3. 省电容麦使用指引</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Linein_cfg.html">2.4. Linein配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IIS_cfg.html">2.5. IIS配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PDM_cfg.html">2.6. PDM配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ANC/index.html">2.7. ANC配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="General_cfg.html">2.8. 通用音频配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio_algo_cfg.html">2.9. 音频算法配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="codec/index.html">2.10. 编解码配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="music_palyback.html">2.11. 音乐播放配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="production_test.html">2.12. 产测配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kws.html">2.13. 离线语音识别KWS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spatial_audio.html">2.14. 空间音效</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Hi_Res_Audio/index.html">2.15. Hi-Res Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Side_Tone.html">2.16. 通话监听</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio_code_size.html">2.17. 音频代码优化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio_code_section.html">2.18. 音频代码段链接配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio_delay.html">2.19. 延时配置（Delay）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audio_debug.html">2.20. 调试配置（debug）</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../audio_flow/index.html">3. 音频流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../audio_effects/index.html">4. 音效调试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../audio_FAQ/index.html">5. 音频FAQ</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">JieLi_蓝牙音频</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html"><span class="section-number">2. </span>音频配置</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2.1. </span>DAC配置</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dac">
+<h1><span class="section-number">2.1. </span>DAC配置<a class="headerlink" href="#dac" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>本配置为通用配置，不同平台，参数会有所差异，只需关注当前使用平台下有的参数即可</p>
+</div>
+<section id="id1">
+<h2><span class="section-number">2.1.1. </span>音频配置<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<section id="id2">
+<h3><span class="section-number">2.1.1.1. </span>声道配置<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<p>设置DAC的输出信号的声道</p>
+<ul class="simple">
+<li><p><strong>单左声道</strong>：</p></li>
+<li><p><strong>单右声道</strong></p></li>
+<li><p><strong>双声道</strong></p></li>
+<li><p><strong>单声道LP-RP</strong></p></li>
+</ul>
+</section>
+<section id="id3">
+<h3><span class="section-number">2.1.1.2. </span>输出方式<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<p>设置DAC的输出方式。常用配置有单端隔直输出、差分输出、VCMO模式输出，需要根据芯片规格和硬件设计进行配置</p>
+<ul class="simple">
+<li><p><strong>参数组1</strong>（e.g.706N、）</p>
+<ul>
+<li><p><strong>单端隔直输出</strong></p></li>
+<li><p><strong>差分输出</strong></p></li>
+<li><p><strong>VCMO直推输出</strong></p></li>
+</ul>
+</li>
+<li><p><strong>参数组2</strong>（e.g.701N）</p></li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Note</p>
+<p>如果输出方式有输出挡位选择的时候，需要注意供电电源的挡位适配，否则会因为供电不足，接近满幅度输出的时候出现削顶<br>比如：701N选择<b>高压二档单端</b>，需要保证<b>IOVDD大于3.3V</b>（选择3.4V挡位）</p>
+</div>
+</section>
+<section id="id4">
+<h3><span class="section-number">2.1.1.3. </span>轻量关闭<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>设置是否使能DAC轻量关闭。通过使能轻量关闭可保持DAC电源常开来避免开关DAC出现PO声</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3><span class="section-number">2.1.1.4. </span>性能模式<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>设置DAC的性能模式。用于选择DAC配置是标准性能模式或是低功耗模式</p></li>
+</ul>
+</section>
+<section id="vcm">
+<h3><span class="section-number">2.1.1.5. </span>VCM电容<a class="headerlink" href="#vcm" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>设置VCM外部是否连接电容。需要根据芯片是否有引出VCM脚以及实际硬件电路是否带有电容进行配置</p></li>
+</ul>
+</section>
+<section id="id6">
+<h3><span class="section-number">2.1.1.6. </span>DAC开启模式<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>设置DAC开启模式，该配置用来适配不同负载，开关DAC可能会有不同的Pop-Up Noise（即开关DAC的po声）。如果默认开启模式po声较大，可以尝试更换开启模式对比</p></li>
+</ul>
+  <div class="admonition danger">
+  <p class="admonition-title">Note</p>
+  <p>更换DAC开启模式选项，需要擦除flash vm配置，重新校准DAC偏置</p>
+  </div>
+</section>
+<section id="ms">
+<h3><span class="section-number">2.1.1.7. </span>缓冲长度(ms)<a class="headerlink" href="#ms" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>设置DAC缓冲长度。用于配置DAC数据缓存大小</p></li>
+</ul>
+</section>
+<section id="analog-gain">
+<h3><span class="section-number">2.1.1.8. </span>Analog Gain<a class="headerlink" href="#analog-gain" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>设置DAC模拟增益档位</p></li>
+</ul>
+</section>
+<section id="id7">
+<h3><span class="section-number">2.1.1.9. </span>音量增强配置<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>仅输出方式为高压二挡单端时可用，需要确保<code class="docutils literal notranslate"><span class="pre">IOVDD</span> <span class="pre">&gt;=</span> <span class="pre">3.4V</span></code><br>
+<img alt="" src="../../_images/dac_power_boost_0.png" /><br><br></p></li>
+<li><p>使能音量增强配置后，可在程序中进一步提高电压配置<code class="docutils literal notranslate"><span class="pre">ldo_volt</span></code>，提高输出幅度。<br></p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">audio_setup</span><span class="p">.</span><span class="n">c</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">audio_dac_initcall</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="p">......</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dac_data</span><span class="p">.</span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DAC_MODE_H2_SINGLE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">dac_data</span><span class="p">.</span><span class="n">power_boost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TCFG_AUDIO_DAC_POWER_BOOST</span><span class="p">;</span>
+<span class="w">      </span><span class="c1">//power_boost使能的情况下，ldo_volt最大可配置到3，再提高一档输出幅度</span>
+<span class="w">      </span><span class="n">dac_data</span><span class="p">.</span><span class="n">ldo_volt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dac_data</span><span class="p">.</span><span class="n">power_boost</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">dac_data</span><span class="p">.</span><span class="n">power_boost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">      </span><span class="n">dac_data</span><span class="p">.</span><span class="n">ldo_volt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="p">......</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul>
+<li><p>在<code class="docutils literal notranslate"><span class="pre">高压二挡单端</span></code>配置下，不同的<code class="docutils literal notranslate"><span class="pre">ldo_volt</span></code>对应的输出幅值：<br></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>ldo_volt 0</p></th>
+<th class="head text-center"><p>ldo_volt 1</p></th>
+<th class="head text-center"><p>ldo_volt 2</p></th>
+<th class="head text-center"><p>ldo_volt 3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>850mVrms</p></td>
+<td class="text-center"><p>883mVrms</p></td>
+<td class="text-center"><p>916mVrms</p></td>
+<td class="text-center"><p>936mVrms</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</section>
+<section id="id8">
+<h3><span class="section-number">2.1.1.10. </span>电流档位配置<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>DAC电流档位：<code class="docutils literal notranslate"><span class="pre">LEVEL0</span> <span class="pre">~</span> <span class="pre">LEVEL6</span></code>可配，配置高档位对于低音听感有一定增强，根据主观听感自行调整合适档位。<br>
+<img alt="" src="../../_images/dac_pa_isel_0.png" /><br><br></p></li>
+</ul>
+</section>
+</section>
+<section id="dac-io">
+<h2><span class="section-number">2.1.2. </span>DAC_IO 配置<a class="headerlink" href="#dac-io" title="Link to this heading"></a></h2>
+<p>当IO资源紧张且项目中没有使用DAC输出方式时，可以将DAC作普通IO使用推电平。</p>
+<section id="id9">
+<h3><span class="section-number">2.1.2.1. </span>使能配置<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<p>音频配置-&gt;DAC配置：<br>
+<img alt="" src="../../_images/dac_io_0.png" /><br>
+需要确保流程中没有DAC节点，可查看<code class="docutils literal notranslate"><span class="pre">jlstream_node_cfg.h</span></code>确认。<br></p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define TCFG_DAC_NODE_ENABLE 0 </span><span class="c1">// DAC</span>
+</pre></div>
+</div>
+</section>
+<section id="id10">
+<h3><span class="section-number">2.1.2.2. </span>接口参数配置<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<p>接口在<code class="docutils literal notranslate"><span class="pre">dac.h</span></code>文件中，支持配置声道数和输出电平幅值，左右声道的电平支持分开配置。<br></p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">audio_dac_io_param</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/*</span>
+<span class="cm">     *       state 通道初始状态</span>
+<span class="cm">     * 使能单左/单右声道，初始状态为高电平：state[0] = 1</span>
+<span class="cm">     * 使能双声道，左声道初始状态为高，右声道初始状态为低：state[0] = 1，state[1] = 0。</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="n">u8</span><span class="w"> </span><span class="n">state</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*</span>
+<span class="cm">     *       irq_points 中断点数</span>
+<span class="cm">     * 申请buf的大小为 buf_len = irq_points * channel_num * 4</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="n">u16</span><span class="w"> </span><span class="n">irq_points</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*</span>
+<span class="cm">     *       channel 打开的通道</span>
+<span class="cm">     * 可配 “BIT(0)、BIT(1)” 对应 “L R”</span>
+<span class="cm">     * 打开多通道时使用或配置：channel = BIT(0) | BIT(1);</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="n">u8</span><span class="w"> </span><span class="n">channel</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*</span>
+<span class="cm">     *       digital_gain 增益</span>
+<span class="cm">     * 影响输出电平幅值，-16384~16384可配</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="n">u16</span><span class="w"> </span><span class="n">digital_gain</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*</span>
+<span class="cm">     *       ldo_volt 电压</span>
+<span class="cm">     * 影响输出电平幅值，0~3可配</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="n">u8</span><span class="w"> </span><span class="n">ldo_volt</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">audio_dac_io_init</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">audio_dac_io_param</span><span class="w"> </span><span class="o">*</span><span class="n">param</span><span class="p">);</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">audio_dac_io_uninit</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">audio_dac_io_param</span><span class="w"> </span><span class="o">*</span><span class="n">param</span><span class="p">);</span>
+
+<span class="cm">/*</span>
+<span class="cm"> * ch：通道</span>
+<span class="cm"> *    左声道 ch = BIT(0)</span>
+<span class="cm"> *    右声道 ch = BIT(1)</span>
+<span class="cm"> *    左右声道 ch = BIT(0) | BIT(1)</span>
+<span class="cm"> * val：电平</span>
+<span class="cm"> *    高电平 val = 1</span>
+<span class="cm"> *    低电平 val = 0</span>
+<span class="cm"> */</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">audio_dac_io_set</span><span class="p">(</span><span class="n">u8</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">val</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="id11">
+<h3><span class="section-number">2.1.2.3. </span>注意事项<a class="headerlink" href="#id11" title="Link to this heading"></a></h3>
+<p>若出现高电平IO无法稳定维持的问题，可通过以下方式初步debug：<br></p>
+<ul class="simple">
+<li><p>提高系统时钟<br></p></li>
+<li><p>在audio_setup.c中的dac_io初始化函数内，增大<code class="docutils literal notranslate"><span class="pre">irq_points</span></code>的值<br></p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">audio_dac_io_initcall</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">audio_dac_io_param</span><span class="w"> </span><span class="n">param</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+<span class="w">    </span><span class="n">param</span><span class="p">.</span><span class="n">state</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">                 </span><span class="c1">//左声道初始电平状态</span>
+<span class="w">    </span><span class="n">param</span><span class="p">.</span><span class="n">state</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">                 </span><span class="c1">//右声道初始电平状态</span>
+<span class="w">    </span><span class="n">param</span><span class="p">.</span><span class="n">irq_points</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span><span class="p">;</span>
+<span class="w">    </span><span class="n">param</span><span class="p">.</span><span class="n">channel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BIT</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">BIT</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">    </span><span class="c1">//使能左右声道</span>
+<span class="w">    </span><span class="n">param</span><span class="p">.</span><span class="n">digital_gain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">16384</span><span class="p">;</span><span class="w">         </span><span class="c1">//数字音量：-16384~16384</span>
+<span class="w">    </span><span class="n">param</span><span class="p">.</span><span class="n">ldo_volt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">                 </span><span class="c1">//电压档位：0~3</span>
+<span class="w">    </span><span class="c1">//此外IOVDD配置也会影响DAC输出电平</span>
+<span class="w">    </span><span class="n">audio_dac_io_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">param</span><span class="p">);</span>
+<span class="p">}</span>
+
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="2. 音频配置" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ADC_cfg.html" class="btn btn-neutral float-right" title="2.2. ADC配置" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2010-2026, 杰理科技股份有限公司.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

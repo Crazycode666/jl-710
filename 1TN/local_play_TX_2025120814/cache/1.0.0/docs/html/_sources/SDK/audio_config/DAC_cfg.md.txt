@@ -1,0 +1,164 @@
+# DAC配置
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>本配置为通用配置，不同平台，参数会有所差异，只需关注当前使用平台下有的参数即可</p>
+</div>
+
+
+## 音频配置
+
+### 声道配置
+设置DAC的输出信号的声道
+- **单左声道**：
+- **单右声道**
+- **双声道**
+- **单声道LP-RP**
+
+### 输出方式
+设置DAC的输出方式。常用配置有单端隔直输出、差分输出、VCMO模式输出，需要根据芯片规格和硬件设计进行配置
+- **参数组1**（e.g.706N、）
+  - **单端隔直输出**
+  - **差分输出**
+  - **VCMO直推输出**
+- **参数组2**（e.g.701N）
+
+
+<div class="admonition danger">
+<p class="admonition-title">Note</p>
+<p>如果输出方式有输出挡位选择的时候，需要注意供电电源的挡位适配，否则会因为供电不足，接近满幅度输出的时候出现削顶<br>比如：701N选择<b>高压二档单端</b>，需要保证<b>IOVDD大于3.3V</b>（选择3.4V挡位）</p>
+</div>
+
+
+### 轻量关闭
+  - 设置是否使能DAC轻量关闭。通过使能轻量关闭可保持DAC电源常开来避免开关DAC出现PO声
+### 性能模式
+  - 设置DAC的性能模式。用于选择DAC配置是标准性能模式或是低功耗模式
+### VCM电容
+  - 设置VCM外部是否连接电容。需要根据芯片是否有引出VCM脚以及实际硬件电路是否带有电容进行配置
+### DAC开启模式
+  - 设置DAC开启模式，该配置用来适配不同负载，开关DAC可能会有不同的Pop-Up Noise（即开关DAC的po声）。如果默认开启模式po声较大，可以尝试更换开启模式对比
+
+  <div class="admonition danger">
+  <p class="admonition-title">Note</p>
+  <p>更换DAC开启模式选项，需要擦除flash vm配置，重新校准DAC偏置</p>
+  </div>
+
+### 缓冲长度(ms)
+  - 设置DAC缓冲长度。用于配置DAC数据缓存大小
+### Analog Gain
+  - 设置DAC模拟增益档位
+  
+### 音量增强配置
+  - 仅输出方式为高压二挡单端时可用，需要确保`IOVDD >= 3.4V`<br>
+  ![](./assets/dac_power_boost_0.png)<br><br>
+  - 使能音量增强配置后，可在程序中进一步提高电压配置`ldo_volt`，提高输出幅度。<br>
+```c
+audio_setup.c
+
+void audio_dac_initcall(void)
+{
+  ......
+      if (dac_data.mode == DAC_MODE_H2_SINGLE) {
+      dac_data.power_boost = TCFG_AUDIO_DAC_POWER_BOOST;
+      //power_boost使能的情况下，ldo_volt最大可配置到3，再提高一档输出幅度
+      dac_data.ldo_volt = dac_data.power_boost ? 2 : 0;
+  } else {
+      dac_data.power_boost = 0;
+      dac_data.ldo_volt = 0;
+  }
+  ......
+}
+```
+
+  - 在`高压二挡单端`配置下，不同的`ldo_volt`对应的输出幅值：<br>
+
+    |ldo_volt 0|ldo_volt 1|ldo_volt 2|ldo_volt 3|
+    |:----:|:----:|:------:|:------:|
+    850mVrms |883mVrms |916mVrms| 936mVrms|
+
+
+### 电流档位配置
+  - DAC电流档位：`LEVEL0 ~ LEVEL6`可配，配置高档位对于低音听感有一定增强，根据主观听感自行调整合适档位。<br>
+  ![](./assets/dac_pa_isel_0.png)<br><br>
+
+## DAC_IO 配置
+
+当IO资源紧张且项目中没有使用DAC输出方式时，可以将DAC作普通IO使用推电平。
+
+### 使能配置
+
+音频配置->DAC配置：<br>
+![](./assets/dac_io_0.png)<br>
+需要确保流程中没有DAC节点，可查看`jlstream_node_cfg.h`确认。<br>
+```c
+#define TCFG_DAC_NODE_ENABLE 0 // DAC
+```
+
+### 接口参数配置
+接口在`dac.h`文件中，支持配置声道数和输出电平幅值，左右声道的电平支持分开配置。<br>
+```c
+struct audio_dac_io_param {
+    /*
+     *       state 通道初始状态
+     * 使能单左/单右声道，初始状态为高电平：state[0] = 1
+     * 使能双声道，左声道初始状态为高，右声道初始状态为低：state[0] = 1，state[1] = 0。
+     */
+    u8 state[2];
+    /*
+     *       irq_points 中断点数
+     * 申请buf的大小为 buf_len = irq_points * channel_num * 4
+     */
+    u16 irq_points;
+    /*
+     *       channel 打开的通道
+     * 可配 “BIT(0)、BIT(1)” 对应 “L R”
+     * 打开多通道时使用或配置：channel = BIT(0) | BIT(1);
+     */
+    u8 channel;
+    /*
+     *       digital_gain 增益
+     * 影响输出电平幅值，-16384~16384可配
+     */
+    u16 digital_gain;
+    /*
+     *       ldo_volt 电压
+     * 影响输出电平幅值，0~3可配
+     */
+    u8 ldo_volt;
+};
+
+void audio_dac_io_init(struct audio_dac_io_param *param);
+void audio_dac_io_uninit(struct audio_dac_io_param *param);
+
+/*
+ * ch：通道
+ *    左声道 ch = BIT(0)
+ *    右声道 ch = BIT(1)
+ *    左右声道 ch = BIT(0) | BIT(1)
+ * val：电平
+ *    高电平 val = 1
+ *    低电平 val = 0
+ */
+void audio_dac_io_set(u8 ch, u8 val);
+```
+
+### 注意事项
+若出现高电平IO无法稳定维持的问题，可通过以下方式初步debug：<br>
+- 提高系统时钟<br>
+- 在audio_setup.c中的dac_io初始化函数内，增大`irq_points`的值<br>
+```c
+static void audio_dac_io_initcall()
+{
+    struct audio_dac_io_param param = {0};
+    param.state[0] = 1;                 //左声道初始电平状态
+    param.state[1] = 1;                 //右声道初始电平状态
+    param.irq_points = 256;
+    param.channel = BIT(0) | BIT(1);    //使能左右声道
+    param.digital_gain = 16384;         //数字音量：-16384~16384
+    param.ldo_volt = 0;                 //电压档位：0~3
+    //此外IOVDD配置也会影响DAC输出电平
+    audio_dac_io_init(&param);
+}
+
+```

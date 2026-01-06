@@ -1,0 +1,36 @@
+信号强度获取
+#########################
+
+获取未连接时TX信号强度
+**********************
+
+    获取未连接时TX信号强度可通过下面接口获取。
+
+    .. image:: imgs/未连接获取TX信号强度.png
+    |
+    .. attention::
+
+        上面的接口还是用来做信号强度过滤的接口，当信号强度大于 ``config_product_scan_rssi`` 时TX和RX才能建立监听连接。如果只想获取信号强度而且不要做信号强度过滤，则需手动注释接口开头的 ``return TRUE`` 。
+
+获取连接后TX信号强度
+**********************
+
+    获取连接后TX信号强度可通过下面接口获取。
+
+    .. image:: imgs/获取连接后TX信号强度.png
+    |
+
+    调用示例：
+
+    .. code-block:: c
+
+        void get_tx_rssi_demo()
+        {
+            int rssi = 0;
+            for (i = 0; i < BIG_MAX_NUMS; i++) {
+                if (app_big_hdl_info[i].bis_hdl_info[j].bis_hdl)     {
+                    rssi = wireless_trans_get_rssi("big_rx", app_big_hdl_info[i].bis_hdl_info[j].bis_hdl);
+                    printf("rssi:%d\n", rssi);
+                }
+            }
+        }

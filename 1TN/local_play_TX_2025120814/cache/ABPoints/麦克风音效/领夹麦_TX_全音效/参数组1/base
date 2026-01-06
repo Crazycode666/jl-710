@@ -1,0 +1,639 @@
+[
+ {
+  "node": "4f54e5d4-f172-4884-9478-fc58c384567a",
+  "parentTab": "id_1758546519694_1",
+  "group": "id_1758546519694_0",
+  "mode": {
+   "current": "arg0",
+   "bypass": false,
+   "list": [
+    {
+     "name": "arg0",
+     "enable": true,
+     "data": [
+      {
+       "id": "id_1671070268689_0",
+       "list": [
+        {
+         "id": "id_1671070296872_1",
+         "value": [
+          1
+         ]
+        }
+       ]
+      },
+      {
+       "id": "id_1675824280474_161",
+       "list": [
+        {
+         "id": "id_1736386659686_0",
+         "value": 7
+        },
+        {
+         "id": "id_1671073072823_3",
+         "value": 0
+        }
+       ]
+      },
+      {
+       "id": "id_1671176268890_10",
+       "list": [
+        {
+         "id": "id_1736386791672_1",
+         "value": 2
+        },
+        {
+         "id": "id_1671176268890_13",
+         "value": 0
+        }
+       ]
+      }
+     ],
+     "bypass": false
+    }
+   ],
+   "name": "ADC4"
+  }
+ },
+ {
+  "node": "6054fd2b-338a-4ed3-86c5-1b1353334d61",
+  "parentTab": "id_1758546519694_1",
+  "group": "id_1758546519694_0",
+  "mode": {
+   "current": 0,
+   "bypass": false,
+   "list": [
+    {
+     "name": "arg0",
+     "data": [
+      {
+       "id": "id_1679401397784_1",
+       "list": [
+        {
+         "id": "id_1679555977650_17",
+         "value": 0
+        },
+        {
+         "id": "id_1744191598089_0",
+         "value": 2
+        },
+        {
+         "id": "id_1691048619342_2",
+         "value": 0.001
+        },
+        {
+         "id": "id_1691048738240_4",
+         "value": 1
+        },
+        {
+         "id": "id_1755784338257_0",
+         "value": 0.2
+        },
+        {
+         "id": "id_1755852317095_0",
+         "value": 1
+        },
+        {
+         "id": "id_1755784343943_1",
+         "value": 1
+        },
+        {
+         "id": "id_1744198589135_0",
+         "list": [
+          {
+           "id": "id_1744198623441_2",
+           "value": 0
+          },
+          {
+           "id": "id_1744198793699_3",
+           "value": -50
+          },
+          {
+           "id": "id_1744199108289_5",
+           "value": -3
+          },
+          {
+           "id": "id_1744199170243_6",
+           "value": 0
+          },
+          {
+           "id": "id_1744199281661_7",
+           "value": -3
+          },
+          {
+           "id": "id_1744199375582_8",
+           "value": -70
+          }
+         ],
+         "expand": 1
+        }
+       ]
+      }
+     ],
+     "enable": true,
+     "bypass": false
+    }
+   ],
+   "name": "LLNS_DNS1"
+  }
+ },
+ {
+  "node": "c394d5ea-b297-43de-9ba2-da255ab28276",
+  "parentTab": "id_1758546519694_1",
+  "group": "id_1758546519694_0",
+  "mode": {
+   "current": "arg0",
+   "bypass": false,
+   "list": [
+    {
+     "name": "arg0",
+     "enable": true,
+     "range": 20,
+     "gain": 0,
+     "sampleRate": 48000,
+     "data": [
+      {
+       "name": "1",
+       "CenterFrequency": 130,
+       "Gain": 0,
+       "QValue": 0.3,
+       "type": 0,
+       "fEnable": true
+      },
+      {
+       "name": "2",
+       "CenterFrequency": 180,
+       "Gain": 0,
+       "QValue": 2,
+       "type": 0,
+       "fEnable": true
+      },
+      {
+       "name": "3",
+       "CenterFrequency": 180,
+       "Gain": 1.5,
+       "QValue": 0.3,
+       "type": 2,
+       "fEnable": true
+      },
+      {
+       "name": "4",
+       "CenterFrequency": 1408,
+       "Gain": 0,
+       "QValue": 1,
+       "type": 2,
+       "fEnable": true
+      },
+      {
+       "name": "5",
+       "CenterFrequency": 2902,
+       "Gain": 0,
+       "QValue": 4.75,
+       "type": 3,
+       "fEnable": true
+      },
+      {
+       "name": "6",
+       "CenterFrequency": 3450,
+       "Gain": 0,
+       "QValue": 0.7,
+       "type": 2,
+       "fEnable": true
+      },
+      {
+       "name": "7",
+       "CenterFrequency": 7793,
+       "Gain": 0,
+       "QValue": 2.95,
+       "type": 2,
+       "fEnable": true
+      },
+      {
+       "name": "8",
+       "CenterFrequency": 10569,
+       "Gain": 0,
+       "QValue": 0.7,
+       "type": 2,
+       "fEnable": true
+      },
+      {
+       "name": "9",
+       "CenterFrequency": 17777,
+       "Gain": 0,
+       "QValue": 0.7,
+       "type": 2,
+       "fEnable": true
+      },
+      {
+       "name": "10",
+       "CenterFrequency": 21599,
+       "Gain": 0,
+       "QValue": 0.7,
+       "type": 2,
+       "fEnable": true
+      },
+      {
+       "name": "Hp",
+       "CenterFrequency": 40,
+       "Gain": 1,
+       "QValue": 0,
+       "type": 7,
+       "fEnable": false
+      },
+      {
+       "name": "Lp",
+       "CenterFrequency": 18000,
+       "Gain": 1,
+       "QValue": 0,
+       "type": 8,
+       "fEnable": false
+      }
+     ],
+     "bypass": false
+    }
+   ],
+   "name": "EQ1"
+  }
+ },
+ {
+  "node": "ac08b06f-0ef2-46b9-8455-19136897d0eb",
+  "parentTab": "id_1758546519694_1",
+  "group": "id_1758546519694_0",
+  "mode": {
+   "current": "arg0",
+   "bypass": false,
+   "list": [
+    {
+     "attacktime": 100,
+     "releasetime": 200,
+     "inputgain": 3,
+     "outputgain": 0,
+     "rmstime": 25,
+     "algorithm": 0,
+     "precision": 1,
+     "type": 1,
+     "data": [
+      [
+       -69.15,
+       -90
+      ],
+      [
+       -37.09,
+       -34.07
+      ],
+      [
+       -29.18,
+       -18.79
+      ],
+      [
+       -9.03,
+       -7.72
+      ],
+      [
+       20,
+       -3.54
+      ]
+     ],
+     "name": "arg0",
+     "enable": true,
+     "bypass": false
+    }
+   ],
+   "name": "DRC1"
+  }
+ },
+ {
+  "node": "46289f89-eae1-4d20-8967-3ba1418aeae2",
+  "parentTab": "id_1758546519694_1",
+  "group": "id_1758546519694_0",
+  "mode": {
+   "current": "arg0",
+   "bypass": false,
+   "list": [
+    {
+     "name": "arg0",
+     "enable": true,
+     "data": [
+      {
+       "id": "id_1676857589685_46",
+       "list": [
+        {
+         "id": "id_1676857589685_27",
+         "value": 0
+        },
+        {
+         "id": "id_1676857589685_29",
+         "value": 100
+        },
+        {
+         "id": "id_1676857589685_31",
+         "value": 75
+        },
+        {
+         "id": "id_1676857589685_33",
+         "value": 50
+        },
+        {
+         "id": "id_1676857589685_35",
+         "value": 12200
+        },
+        {
+         "id": "id_1676857589685_37",
+         "value": 33
+        },
+        {
+         "id": "id_1676857589685_39",
+         "value": 60
+        },
+        {
+         "id": "id_1676857589685_41",
+         "value": 26
+        },
+        {
+         "id": "id_1676857589685_43",
+         "value": 1
+        },
+        {
+         "id": "id_1676857589685_45",
+         "value": 100
+        }
+       ]
+      },
+      {
+       "id": "id_1690529956454_0",
+       "list": [
+        {
+         "id": "id_1690529956454_10",
+         "value": 0
+        }
+       ],
+       "expand": 1
+      }
+     ],
+     "bypass": false
+    }
+   ],
+   "name": "PlateRever51011"
+  }
+ },
+ {
+  "node": "4fdd85a9-87d0-43bb-8bfc-f45a58dcb9d4",
+  "parentTab": "id_1758546519694_1",
+  "group": "id_1758546519694_0",
+  "mode": {
+   "current": "",
+   "list": [
+    {
+     "name": "arg0",
+     "enable": true,
+     "data": [
+      {
+       "id": "id_1675825867879_27",
+       "list": [
+        {
+         "id": "id_1704936301911_1",
+         "value": 0
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "name": "ChannelMerBF8E3"
+  }
+ },
+ {
+  "node": "daf22fcd-9506-407e-ba2c-0e765bae8ee4",
+  "parentTab": "id_1758546519694_1",
+  "group": "id_1758546519694_0",
+  "mode": {
+   "current": "",
+   "list": [
+    {
+     "name": "arg0",
+     "enable": true,
+     "data": [
+      {
+       "id": "id_1676447331464_3",
+       "list": [
+        {
+         "id": "id_1681280938229_0",
+         "value": 0
+        },
+        {
+         "id": "id_1676447481291_4",
+         "value": 16
+        },
+        {
+         "id": "id_1676447941026_6",
+         "value": -45
+        },
+        {
+         "id": "id_1678088452701_0",
+         "value": 1
+        },
+        {
+         "id": "id_1677290960342_0",
+         "value": 0
+        },
+        {
+         "id": "id_1690535811640_0",
+         "value": 16
+        },
+        {
+         "id": "id_1676801188975_0",
+         "value": 16
+        }
+       ]
+      },
+      {
+       "id": "id_1677751149521_1",
+       "list": []
+      }
+     ]
+    }
+   ],
+   "name": "Vol_WMicTX"
+  }
+ },
+ {
+  "node": "170ce734-23d2-4fb0-8aed-7659bff574d7",
+  "parentTab": "id_1758546519694_1",
+  "group": "id_1758546519694_0",
+  "mode": {
+   "current": "",
+   "list": [
+    {
+     "name": "arg0",
+     "enable": true,
+     "data": [
+      {
+       "id": "id_1682580902370_0",
+       "list": [
+        {
+         "id": "id_1682666755532_2",
+         "value": 2
+        },
+        {
+         "id": "id_1713834265905_0",
+         "value": 0
+        },
+        {
+         "id": "id_1719316377982_0",
+         "value": 100
+        },
+        {
+         "id": "id_1682666801718_3",
+         "value": 32000
+        },
+        {
+         "id": "id_1682667012781_7",
+         "value": 64000
+        },
+        {
+         "id": "id_1682580918689_1",
+         "value": 1
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "name": "A2C3"
+  }
+ },
+ {
+  "node": "52e8d91e-49af-4c35-91c9-4e3a1bd9a9fe",
+  "parentTab": "id_1758546519694_1",
+  "group": "id_1758546519694_0",
+  "mode": {
+   "current": "arg0",
+   "bypass": false,
+   "list": [
+    {
+     "name": "arg0",
+     "enable": true,
+     "data": [
+      {
+       "id": "id_1678246329785_3",
+       "list": [
+        {
+         "id": "id_1677140583268_0",
+         "value": 25
+        },
+        {
+         "id": "id_1677144866465_6",
+         "value": 100
+        },
+        {
+         "id": "id_1719387029771_0",
+         "value": 0
+        }
+       ]
+      }
+     ],
+     "bypass": false
+    }
+   ],
+   "name": "9B3B2"
+  }
+ },
+ {
+  "node": "99427498-7d75-4527-8030-312f9d841504",
+  "parentTab": "id_1758546519694_1",
+  "group": "id_1758546519694_0",
+  "mode": {
+   "current": "",
+   "list": [
+    {
+     "name": "arg0",
+     "enable": true,
+     "data": [
+      {
+       "id": "id_1676447331464_3",
+       "list": [
+        {
+         "id": "id_1681280938229_0",
+         "value": 0
+        },
+        {
+         "id": "id_1676447481291_4",
+         "value": 16
+        },
+        {
+         "id": "id_1676447941026_6",
+         "value": -45
+        },
+        {
+         "id": "id_1678088452701_0",
+         "value": 1
+        },
+        {
+         "id": "id_1677290960342_0",
+         "value": 0
+        },
+        {
+         "id": "id_1690535811640_0",
+         "value": 16
+        },
+        {
+         "id": "id_1676801188975_0",
+         "value": 16
+        }
+       ]
+      },
+      {
+       "id": "id_1677751149521_1",
+       "list": []
+      }
+     ]
+    }
+   ],
+   "name": "Vol_WMonitor"
+  }
+ },
+ {
+  "node": "2384c30a-373c-469f-9b97-ac1470e99475",
+  "parentTab": "id_1758546519694_1",
+  "group": "id_1758546519694_0",
+  "mode": {
+   "current": "",
+   "list": [
+    {
+     "name": "arg0",
+     "enable": true,
+     "data": [
+      {
+       "id": "id_1678246329785_2",
+       "list": [
+        {
+         "id": "id_1677642341249_0",
+         "value": 50
+        },
+        {
+         "id": "id_1677642343355_1",
+         "value": 8
+        },
+        {
+         "id": "id_1677642344547_2",
+         "value": 0
+        }
+       ]
+      },
+      {
+       "id": "id_1702378606977_0",
+       "list": [
+        {
+         "id": "id_1693469084872_1",
+         "value": 0
+        }
+       ],
+       "expand": 1
+      }
+     ]
+    }
+   ],
+   "name": "DAC2"
+  }
+ }
+]

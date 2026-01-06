@@ -1,0 +1,214 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1.6. 自定义数据传输 &mdash; JL Project Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="https://doc.zh-jieli.com/static/css/custom.css" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=fa47ad08"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="https://doc.zh-jieli.com/static/js/custom.js"></script>
+      <script src="../../../../_static/js/custom.js?v=bfa33168"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="1.7. 延时设置说明" href="%E5%BB%B6%E6%97%B6%E9%85%8D%E7%BD%AE.html" />
+    <link rel="prev" title="1.5. ADC和DAC相关配置" href="ADC%E5%92%8CDAC%E9%85%8D%E7%BD%AE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html">
+            
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">SDK入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework/index.html">1. 技术框架</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/index.html">2. 快速入门</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">主要功能介绍</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">1. SDK 详细介绍</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="%E9%A2%86%E5%A4%B9%E9%BA%A6/index.html">1.1. 领夹麦应用设计说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E9%99%8D%E5%99%AA.html">1.2. 降噪</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E9%9F%B3%E9%87%8F%E8%B0%83%E8%8A%82.html">1.3. 音量调节说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E7%BB%91%E5%AE%9A%E5%8A%9F%E8%83%BD.html">1.4. 绑定配对</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ADC%E5%92%8CDAC%E9%85%8D%E7%BD%AE.html">1.5. ADC和DAC相关配置</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.6. 自定义数据传输</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bst">1.6.1. BST传输方式</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="%E5%BB%B6%E6%97%B6%E9%85%8D%E7%BD%AE.html">1.7. 延时设置说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E8%93%9D%E7%89%99PA%E9%85%8D%E7%BD%AE.html">1.8. 蓝牙PA配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E6%B5%8B%E8%AF%95%E7%9B%92%E4%BD%BF%E7%94%A8.html">1.9. 测试盒使用说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E9%9F%B3%E6%95%88%E5%88%87%E6%8D%A2.html">1.10. 音效切换说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E4%BF%A1%E5%8F%B7%E5%BC%BA%E5%BA%A6%E8%8E%B7%E5%8F%96.html">1.11. 信号强度获取</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E5%8A%9F%E8%80%97%E4%BC%98%E5%8C%96.html">1.12. 功耗优化说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E9%9F%B3%E9%A2%9124BIT%E4%BF%AE%E6%94%B9%E8%AF%B4%E6%98%8E.html">1.13. 音频24BIT修改说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84%E4%BB%8B%E7%BB%8D/index.html">1.14. 系统管理</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">系统功能进阶</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../driver/index.html">1. 外设驱动</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../driver/pmu/index.html">2. 电源管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../key_config/index.html">3. 按键配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pwm_led/index.html">4. LED状态显示</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../system/file_system/index.html">5. 文件系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../system/os/index.html">6. 操作系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_manager/index.html">7. 设备管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../system/%E9%80%9A%E7%94%A8%E7%BB%84%E4%BB%B6/index.html">8. 通用组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../system/report/index.html">9. 系统状态报告</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../system/resource_manage/index.html">10. 资源管理帮助</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">蓝牙功能进阶</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../bt/btstack/index.html">1. 蓝牙协议栈</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bt/ble/index.html">2. BLE开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bt/FindMy/FindMy.html">3. FindMy</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">音频功能进阶</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../audio/index.html">1. 音频播放</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../audio_config/index.html">2. 音频配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../audio_flow/index.html">3. 音频流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../audio_effects/index.html">4. 音效调试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../audio_FAQ/index.html">5. 音频FAQ</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">JieLi_蓝牙音频</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"><span class="section-number">1. </span>SDK 详细介绍</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.6. </span>自定义数据传输</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><span class="section-number">1.6. </span>自定义数据传输<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<section id="bst">
+<h2><span class="section-number">1.6.1. </span>BST传输方式<a class="headerlink" href="#bst" title="Link to this heading"></a></h2>
+<blockquote>
+<div><p>SDK 默认提供了一个 TX 和 RX 互相发送自定义数据的机制。用户可通过SDK提供的自定义数据发送接口发送自定义数据。以下是使用实例：</p>
+</div></blockquote>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">//example code</span>
+<span class="linenos"> 2</span><span class="kt">void</span><span class="w"> </span><span class="nf">example_code</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="linenos"> 3</span><span class="p">{</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="cm">/*</span>
+<span class="linenos"> 5</span><span class="cm">        &#39;x&#39;:字符标识uuid，用于RX匹配数据接收回调接口，一般赋值为字符。</span>
+<span class="linenos"> 6</span><span class="cm">        buf:需要发送的数据</span>
+<span class="linenos"> 7</span><span class="cm">        len:需要发送的数据长度</span>
+<span class="linenos"> 8</span><span class="cm">        remote_dev:远端设备标识，一般有以下几种赋值。</span>
+<span class="linenos"> 9</span><span class="cm">                    #define WIRELESS_TX_DEV1  BIT(0)   //发送设备1，适用于BIS/BST</span>
+<span class="linenos">10</span><span class="cm">                    #define WIRELESS_TX_DEV2  BIT(1)   //发送设备2，适用于BIS/BST</span>
+<span class="linenos">11</span><span class="cm">                    #define WIRELESS_RX_DEV1  BIT(2)   //接收设备1，适用于BIS/BST</span>
+<span class="linenos">12</span><span class="cm">                    #define WIRELESS_MASTER_DEV  BIT(0)   //主机，适用于CIS</span>
+<span class="linenos">13</span><span class="cm">                    #define WIRELESS_SLAVE_DEV1  BIT(1)   //从机1，适用于CIS</span>
+<span class="linenos">14</span><span class="cm">                    #define WIRELESS_SLAVE_DEV2  BIT(2)   //从机2，适用于CIS</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="cm">    */</span>
+<span class="linenos">17</span><span class="w">    </span><span class="n">wireless_custom_data_send_to_sibling</span><span class="p">(</span><span class="sc">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">,</span><span class="w"> </span><span class="n">len</span><span class="p">,</span><span class="w"> </span><span class="n">remote_dev</span><span class="p">);</span>
+<span class="linenos">18</span><span class="p">}</span>
+<span class="linenos">19</span>
+<span class="linenos">20</span><span class="c1">//接收远端发过来的数据</span>
+<span class="linenos">21</span><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">receive_remote_dev_data</span><span class="p">(</span><span class="n">u16</span><span class="w"> </span><span class="n">acl_hdl</span><span class="p">,</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">arg_num</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">)</span>
+<span class="linenos">22</span><span class="p">{</span>
+<span class="linenos">23</span><span class="w">    </span><span class="n">u8</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="linenos">24</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">trans_role</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="linenos">25</span><span class="w">    </span><span class="n">u8</span><span class="w"> </span><span class="o">*</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">u8</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="linenos">26</span><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="linenos">27</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">trans_role</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">CUSTOM_DATA_TRANS_AS_RX</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">28</span><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">BIG_MAX_NUMS</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">29</span><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">BIG_MAX_BIS_NUMS</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">30</span><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">app_big_hdl_info</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">bis_hdl_info</span><span class="p">[</span><span class="n">j</span><span class="p">].</span><span class="n">aux_hdl</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">acl_hdl</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">31</span><span class="w">                    </span><span class="c1">//data为对方发送过来的数据。</span>
+<span class="linenos">32</span><span class="w">                </span><span class="p">}</span>
+<span class="linenos">33</span><span class="w">            </span><span class="p">}</span>
+<span class="linenos">34</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">35</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">36</span><span class="w">    </span><span class="c1">//由于转发流程中申请了内存，因此执行完毕后必须释放</span>
+<span class="linenos">37</span><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">38</span><span class="w">        </span><span class="n">free</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+<span class="linenos">39</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">40</span><span class="p">}</span>
+<span class="linenos">41</span>
+<span class="linenos">42</span><span class="n">CUSTOM_DATA_TRANS_STUB_REGISTER</span><span class="p">(</span><span class="n">example</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">43</span><span class="w">    </span><span class="p">.</span><span class="n">uuid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;x&#39;</span><span class="p">,</span><span class="w">    </span><span class="c1">//要与wireless_custom_data_send_to_sibling第一个参数对应</span>
+<span class="linenos">44</span><span class="w">    </span><span class="p">.</span><span class="n">task_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;app_core&quot;</span><span class="p">,</span><span class="w">    </span><span class="c1">//执行receive_remote_dev_data接口的线程</span>
+<span class="linenos">45</span><span class="w">    </span><span class="p">.</span><span class="n">func</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">receive_remote_dev_data</span><span class="p">,</span><span class="w">    </span><span class="c1">//执行接收的数据的回调接口</span>
+<span class="linenos">46</span><span class="p">};</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ADC%E5%92%8CDAC%E9%85%8D%E7%BD%AE.html" class="btn btn-neutral float-left" title="1.5. ADC和DAC相关配置" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="%E5%BB%B6%E6%97%B6%E9%85%8D%E7%BD%AE.html" class="btn btn-neutral float-right" title="1.7. 延时设置说明" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2010-2026, 杰理科技股份有限公司.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

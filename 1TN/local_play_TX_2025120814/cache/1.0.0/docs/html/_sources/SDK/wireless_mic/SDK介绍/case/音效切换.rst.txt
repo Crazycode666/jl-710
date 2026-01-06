@@ -1,0 +1,140 @@
+音效切换说明
+#########################
+
+场景参数组切换情况
+******************
+
+    .. image:: imgs/场景参数切换.png
+    |
+    按以下步骤，使用代码可实现上图的场景参数切换。
+
+    1. 进入audio_config_def.h，打开TCFG_SCENE_UPDATE_ENABLE宏；
+
+    .. image:: imgs/场景参数切换-code.png
+    |
+    2. 调用update_mic_pipeline_node_list接口。该接口的形参 ``mode_index`` 对应场景的参数组切换情况，取值从0开始。
+
+    .. code-block:: c
+
+        void update_mic_pipeline_node_list(u8 mode_index, u8 cfg_index)
+        {
+            struct pipeline_node_hdl *_hdl = NULL;
+            list_for_each_entry(_hdl, &mic_node_list.head, entry) {
+                if (_hdl) {
+                    struct node_param ncfg = {0};
+                    int node_len = jlstream_read_node_data(_hdl->uuid, _hdl->subid, (u8 *)&ncfg);
+                    if (node_len == sizeof(ncfg)) {
+                        node_param_update(_hdl->uuid, ncfg.name, mode_index, cfg_index);
+                    }
+                }
+            }
+        }
+
+
+多个节点参数切换情况
+*******************
+
+    对于多个节点参数的切换，需要在音频框图上面对应的节点添加多组配置参数。
+
+    .. image:: imgs/多个节点多组参数切换.png
+    |
+    SDK还支持同一框图所有节点同时切换参数（不切换场景）的情况，与场景参数组切换情况操作流程相似。
+
+    1. 进入audio_config_def.h，打开TCFG_SCENE_UPDATE_ENABLE宏；
+
+    .. image:: imgs/场景参数切换-code.png
+    |
+    2. 调用update_mic_pipeline_node_list接口。该接口的形参 ``cfg_index`` 对所有节点的参数切换情况，取值从0开始。
+
+    .. code-block:: c
+
+        void update_mic_pipeline_node_list(u8 mode_index, u8 cfg_index)
+        {
+            struct pipeline_node_hdl *_hdl = NULL;
+            list_for_each_entry(_hdl, &mic_node_list.head, entry) {
+                if (_hdl) {
+                    struct node_param ncfg = {0};
+                    int node_len = jlstream_read_node_data(_hdl->uuid, _hdl->subid, (u8 *)&ncfg);
+                    if (node_len == sizeof(ncfg)) {
+                        node_param_update(_hdl->uuid, ncfg.name, mode_index, cfg_index);
+                    }
+                }
+            }
+        }
+
+单个节点参数切换情况
+*******************
+
+    对于单个节点参数的切换，需要在音频框图上面对应的节点添加多组配置参数。
+
+    .. image:: imgs/单个节点多组参数切换1.png
+
+    .. image:: imgs/单个节点多组参数切换2.png
+    |
+    在对应的节点加好多组配置参数后，可以通过相关接口来切换参数。以plate_reverb和LLNS_DNS为例，可以使用以下接口实现参数切换。
+
+    .. code-block:: c
+
+        /* --------------------------------------------------------------------------*/
+        /**
+        * @brief 切换reverb参数
+        *
+        * @param bypass 0xff:切换参数，1：bypass，0：关闭bypass
+        */
+        /* ----------------------------------------------------------------------------*/
+        void app_plate_reverb_parm_switch(int bypass)
+        {
+            static u8 cfg_index = 0;
+            //没有bypass，则切换参数
+            if (0xff == bypass) {
+                cfg_index++;
+            }
+            g_printf("cfg_index:%d", cfg_index);
+            //第二个参数需要与音频框图对应节点名称一致
+            int ret = plate_reverb_update_parm_base(0, "PlateRever51011", cfg_index, bypass);
+            if (-1 == ret) {
+                //读不到节点参数，可能index已经超过可读参数
+                cfg_index = 0;
+                ret = plate_reverb_update_parm_base(0, "PlateRever51011", cfg_index, bypass);
+            }
+        }
+
+        /* --------------------------------------------------------------------------*/
+        /**
+        * @brief 切换llns_dns参数
+        *
+        * @param bypass 0xff:切换参数，1：bypass，0：关闭bypass
+        */
+        /* ----------------------------------------------------------------------------*/
+        void app_llns_dns_parm_switch(int bypass)
+        {
+            static u8 cfg_index = 0;
+            //没有bypass，则切换参数
+            if (0xff == bypass) {
+                cfg_index++;
+            }
+            g_printf("cfg_index:%d", cfg_index);
+            //第二个参数需要与音频框图对应节点名称一致
+            int ret = llns_dns_update_parm_base(0, "LLNS_DNS1", cfg_index, bypass);
+            if (-1 == ret) {
+                //读不到节点参数，可能index已经超过可读参数
+                cfg_index = 0;
+                ret = llns_dns_update_parm_base(0, "LLNS_DNS1", cfg_index, bypass);
+            }
+        }
+
+    .. attention:: 
+
+        1. 上面接口的 ``“LLNS_DNS1”`` 和 ``"PlateRever51011"`` 要对应音频框图的节点名称。如下图所示。
+
+        .. image:: imgs/单个节点多组参数切换3.png
+        |
+        2. 如果打开节点配置发现界面与上图不同，可通过点击 ``节点配置`` 回到上面界面。
+
+        .. image:: imgs/返回节点配置.png
+
+    其他节点的参数切换在node_param_update.c中找到。
+
+    .. image:: imgs/单个节点参数切换-code1.png
+
+

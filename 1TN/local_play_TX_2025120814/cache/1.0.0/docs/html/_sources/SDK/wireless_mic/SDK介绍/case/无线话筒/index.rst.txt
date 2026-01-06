@@ -1,0 +1,124 @@
+无线话筒应用设计说明
+#########################
+
+概述
+*****
+    该功能实现  私有的LE_AUDIO Boardcast音频转发。
+
+应用场景
+*********
+
+.. image:: imgs/BIS应用场景.png
+
+可视化工具配置
+**************
+    使用该功能需要打开可视化配置工具上面 **LE_AUDIO配置->BIS配置->BIS功能配置->发送使能或接收使能**。
+
+    .. image:: imgs/可视化配置.png
+
+    发送使能和接收使能可同时打开，在广播角色配置为 **不固定** 时，根据当前设备是否有音源正在播放，自动切换当前角色。
+
+流程设计及文件结构
+****************
+    1. 流程设计
+
+        蓝牙初始化完成后，调用 **app_broadcast_switch** 接口，或者调用 **bt_work_mode_select(BT_MODE_BROADCAST)** 打开广播，如果配置广播角色为不固定，则会根据当前设备的播放状态决定打开 **接收** 还是 **发送**
+
+        .. image:: imgs/broadcast流程图.png
+
+
+    2. 文件结构
+   
+        .. image:: imgs/文件结构.png
+
+
+    3. 音频流程图
+
+        .. image:: imgs/音频流程图.png
+        
+		
+
+模块接口设计
+****************
+
+`````````````````````````````````````````````````
+get_receiver_connected_status
+`````````````````````````````````````````````````
+各个模式进入时调用开启local_tws流程，如果当前模式为蓝牙模式则通知对方进入蓝牙模式，非蓝牙模式则通知对方进入sink模式。
+
+原型：
+
+.. code-block:: c
+
+    u8 get_receiver_connected_status(void);
+
+参数：
+    ============   ===========================================
+    返回值           接收方连接状态
+    ============   ===========================================
+	
+示例：
+
+.. code-block:: c
+
+      //bis发射或者正在监听时不能自动关机
+    #if (LEA_BIG_CTRLER_TX_EN || LEA_BIG_CTRLER_RX_EN)
+        if ((get_broadcast_role() == BROADCAST_ROLE_TRANSMITTER) || (get_receiver_connected_status())) {
+            log_error("sys_auto_shut_down_enable cannot in le audio open\n");
+            return;
+        }
+    #endif
+
+
+
+`````````````````````````````````````````````````
+app_broadcast_switch
+`````````````````````````````````````````````````
+用于广播开关切换
+
+原型：
+
+.. code-block:: c
+
+    int app_broadcast_switch(void);
+
+参数：
+    ============   ===========================================
+    参数             无
+    返回值           -1:切换失败，1:关闭成功，2：开启成功
+    ============   ===========================================
+
+
+`````````````````````````````````````````````````
+update_broadcast_sync_data
+`````````````````````````````````````````````````
+更新广播同步状态的数据
+
+原型：
+
+.. code-block:: c
+
+    int update_broadcast_sync_data(u8 type, int value)
+
+参数：
+    ============   ===========================================
+    type            更新项
+    value           更新值
+    返回值           0：success 
+    ============   ===========================================
+
+
+示例：
+
+.. code-block:: c
+
+    void app_audio_set_volume(u8 state, s16 volume, u8 fade)
+    {
+        audio_app_volume_set(state, volume, fade);
+    #if (LEA_BIG_CTRLER_TX_EN || LEA_BIG_CTRLER_RX_EN)
+        if (state == APP_AUDIO_STATE_MUSIC) {
+            update_broadcast_sync_data(BROADCAST_SYNC_VOL, volume);
+        }
+    #endif
+    }
+

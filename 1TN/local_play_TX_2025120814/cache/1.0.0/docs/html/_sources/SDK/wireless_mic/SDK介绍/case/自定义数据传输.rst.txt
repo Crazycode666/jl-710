@@ -1,0 +1,12 @@
+自定义数据传输
+##############
+
+BST传输方式
+************
+
+    SDK 默认提供了一个 TX 和 RX 互相发送自定义数据的机制。用户可通过SDK提供的自定义数据发送接口发送自定义数据。以下是使用实例：
+
+.. literalinclude:: code/custom_data_example.c
+   :language: c
+   :linenos:
+

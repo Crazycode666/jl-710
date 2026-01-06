@@ -1,0 +1,15 @@
+降噪
+#########################
+
+LLNS_DNS
+**************
+
+    LLNS_DNS是一种环境降噪算法，一般用于领夹麦产品，可通过在音频框图中配置对应的节点实现降噪功能。
+
+    .. image:: imgs/LLNS_DNS1.png
+
+    .. image:: imgs/LLNS_DNS2.png
+    |
+    .. attention::
+
+        AGC_CFG的配置不建议开发者随意修改。

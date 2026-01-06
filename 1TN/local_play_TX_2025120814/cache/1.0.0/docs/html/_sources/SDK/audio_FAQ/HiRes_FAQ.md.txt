@@ -1,0 +1,4 @@
+# Hi-Res Audio FAQ
+- Hi-Res Audio认证指引：<mark>音频配置/Hi-Res Audio</mark>
+
+- Hi-Res Audio FAQ：[🔗点击跳转](./../audio_config/Hi_Res_Audio/HiRes_FAQ.md)

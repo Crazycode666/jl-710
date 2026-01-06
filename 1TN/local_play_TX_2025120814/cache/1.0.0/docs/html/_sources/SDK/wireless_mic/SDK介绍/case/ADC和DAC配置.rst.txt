@@ -1,0 +1,21 @@
+ADC和DAC相关配置
+#########################
+
+ADC相关配置
+**************
+
+ADC参数配置
+===========
+
+    .. image:: imgs/ADC配置.png
+
+ADC增益配置
+===========
+
+    .. image:: imgs/ADC增益配置1.png
+    |
+    .. image:: imgs/ADC增益配置2.png
+
+DAC相关配置
+**************
+    .. image:: imgs/DAC配置.png

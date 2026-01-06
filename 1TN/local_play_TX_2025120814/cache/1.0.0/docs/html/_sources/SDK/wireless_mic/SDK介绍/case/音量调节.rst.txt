@@ -1,0 +1,98 @@
+音量调节说明
+#########################
+
+TX端音量调节
+**************
+
+TX端发射音量控制节点介绍
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+    TX 发射音量调节节点名称为 **Vol_WMicTX**
+
+
+    .. image:: imgs/TX端发射音量调节节点1.jpg
+    |
+    .. image:: imgs/TX端发射音量调节节点2.jpg
+
+
+
+TX端发射音量控制接口介绍
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+    TX 增大发射音量按键事件：**APP_MSG_WIRELESS_MIC_TX_VOL_UP**
+
+    TX 减小发射音量按键事件：**APP_MSG_WIRELESS_MIC_TX_VOL_DOWN**
+
+    .. image:: imgs/TX端发射音量调节接口.jpg
+
+    
+TX端监听音量控制节点介绍
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+    TX 监听音量调节节点名称为 **Vol_WMonitor**
+
+
+    .. image:: imgs/TX端监听音量调节节点1.jpg
+
+
+
+
+TX端监听音量控制接口介绍
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+    TX 增大本地监听音量按键事件：**APP_MSG_WIRELESS_MIC_TX_MONITOR_VOL_UP**
+
+    TX 减小本地监听音量按键事件：**APP_MSG_WIRELESS_MIC_TX_MONITOR_VOL_DOWN**
+
+    .. image:: imgs/TX端监听音量调节接口.jpg
+
+    
+
+
+RX端音量调节
+**************
+
+RX端音量控制节点介绍
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+    RX 音量调节节点名称为 **Vol_WMic0**、**Vol_WMic1**.
+
+    .. attention::
+        只有一路解码时默认使用音量节点 **Vol_WMic0**。
+
+    .. image:: imgs/RX端音量调节节点1.jpg
+
+
+
+RX端音量控制接口介绍
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+    **Vol_WMic0** 增大音量按键事件：**APP_MSG_WIRELESS_MIC0_VOL_UP**
+
+    **Vol_WMic0** 减小音量按键事件：**APP_MSG_WIRELESS_MIC0_VOL_DOWN**
+
+    **Vol_WMic1** 增大音量按键事件：**APP_MSG_WIRELESS_MIC1_VOL_UP**
+
+    **Vol_WMic1** 减小音量按键事件：**APP_MSG_WIRELESS_MIC1_VOL_DOWN**
+
+    .. image:: imgs/RX端音量调节接口.jpg
+
+
+静音说明
+**************
+
+    TX 发射通路静音接口：
+    
+    .. code-block:: c
+    
+        void le_audio_wireless_mic_tx_dvol_mute(bool mute)
+
+    .. image:: imgs/TX端发射音量调节节点1.jpg
+    |
+    TX 监听通路静音接口：
+
+    .. code-block:: c
+    
+        void le_audio_wireless_mic_tx_monitor_dvol_mute(bool mute)
+
+    .. image:: imgs/TX端监听音量调节节点1.jpg

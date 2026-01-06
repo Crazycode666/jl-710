@@ -1,0 +1,18 @@
+# 产测模式
+支持蓝牙播歌产测，以及附带ADC、DAC、IIS 功能/性能指标测试。
+```c
+//打开ADC_to_DAC/ADC_to_IIS/IIS_to_DAC链路
+int adda_loop_player_open();
+```
+## ADC_to_DAC_test
+- 测试ADC->DAC直通通路，可以用于测试最原始DAC指标。
+## ADC_to_DAC_test(SYNC)
+- 测试ADC->SYNC->DAC通路，可以用于测试引入了同步之后的DAC指标，引入同步更贴近实际工程使用情况。
+## ADC_to_IIS_test
+- 测试ADC->IIS直通通路，由于IIS为数字信号，一般视为无损耗，可以用于单独确认ADC指标。
+## ADC_to_IIS_test(SYNC)
+- 测试ADC->SYNC->IIS，由于IIS为数字信号，一般视为无损耗，可以用于单独确认ADC指标，引入同步更贴近实际工程使用情况。
+## IIS_to_DAC(mono)
+- 测试IIS->DAC直通通路，由于IIS为数字信号，一般视为无损耗，可以用于单独确认DAC指标。
+## IIS_to_DAC(stereo)
+- 测试IIS->SYNC->DAC，由于IIS为数字信号，一般视为无损耗，可以用于单独确认DAC指标，引入同步更贴近实际工程使用情况。

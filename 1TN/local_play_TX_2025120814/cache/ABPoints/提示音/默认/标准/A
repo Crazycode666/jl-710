@@ -1,0 +1,400 @@
+[
+ {
+  "node": "994640b0-0751-4d6d-9ae3-8de7b7561db8",
+  "parentTab": "id_1677491290416_0",
+  "group": "id_1753081374853_1",
+  "mode": {
+   "current": "",
+   "list": [
+    {
+     "name": "arg0",
+     "data": [
+      {
+       "id": "id_1693539807876_1",
+       "list": [
+        {
+         "id": "id_1693469084872_1",
+         "value": 1
+        }
+       ]
+      }
+     ],
+     "enable": true
+    }
+   ],
+   "name": "config4235816"
+  }
+ },
+ {
+  "node": "16c6062a-96d4-423a-8529-fdb1f5bd9436",
+  "parentTab": "id_1677491290416_0",
+  "group": "id_1753081374853_1",
+  "mode": {
+   "current": "arg0",
+   "list": [
+    {
+     "name": "arg0",
+     "data": [
+      {
+       "id": "id_1676447481291_4",
+       "value": 16
+      },
+      {
+       "id": "id_1676447941026_6",
+       "value": -45
+      },
+      {
+       "id": "id_1678088452701_0",
+       "value": 1
+      },
+      {
+       "id": "id_1677290960342_0",
+       "value": 0
+      },
+      {
+       "id": "id_1676801188975_0",
+       "value": 10
+      },
+      {
+       "id": "id_1677751149521_1",
+       "list": []
+      }
+     ],
+     "enable": true
+    }
+   ],
+   "name": "Vol_SysTone"
+  }
+ },
+ {
+  "node": "d0b699a1-db9a-4a9f-94be-acfb0b9795e6",
+  "parentTab": "id_1677491290416_0",
+  "group": "id_1753081374853_1",
+  "mode": {
+   "current": "",
+   "bypass": false,
+   "list": [
+    {
+     "name": "arg0",
+     "data": [
+      {
+       "id": "id_1675825867879_27",
+       "list": [
+        {
+         "id": "id_1704936301911_1",
+         "value": 0
+        }
+       ]
+      }
+     ],
+     "enable": true
+    }
+   ],
+   "name": "ChannelMerBF8E4"
+  }
+ },
+ {
+  "node": "0c360f2e-b149-45c7-928e-c690ec53e9a0",
+  "parentTab": "id_1677491290416_0",
+  "group": "id_1753081374853_1",
+  "mode": {
+   "current": "arg0",
+   "bypass": false,
+   "list": [
+    {
+     "name": "arg0",
+     "data": [
+      {
+       "id": "id_1678246329785_2",
+       "list": [
+        {
+         "id": "id_1677642341249_0",
+         "value": 50
+        },
+        {
+         "id": "id_1677642343355_1",
+         "value": 8
+        },
+        {
+         "id": "id_1677642344547_2",
+         "value": 0
+        }
+       ]
+      },
+      {
+       "id": "id_1702378606977_0",
+       "list": [
+        {
+         "id": "id_1693469084872_1",
+         "value": 0
+        }
+       ],
+       "expand": 1
+      }
+     ],
+     "enable": true,
+     "bypass": false
+    }
+   ],
+   "name": "DAC24"
+  }
+ },
+ {
+  "node": "4aebcaf0-253a-4c37-b886-111f9bca747f",
+  "parentTab": "id_1677491290416_0",
+  "group": "id_1753081374853_1",
+  "mode": {
+   "current": "arg0",
+   "list": [
+    {
+     "name": "arg0",
+     "data": [
+      {
+       "id": "id_1676447481291_4",
+       "value": 16
+      },
+      {
+       "id": "id_1676447941026_6",
+       "value": -45
+      },
+      {
+       "id": "id_1678088452701_0",
+       "value": 1
+      },
+      {
+       "id": "id_1677290960342_0",
+       "value": 0
+      },
+      {
+       "id": "id_1676801188975_0",
+       "value": 10
+      },
+      {
+       "id": "id_1677751149521_1",
+       "list": []
+      }
+     ],
+     "enable": true
+    }
+   ],
+   "name": "Vol_SysKTone"
+  }
+ },
+ {
+  "node": "fc97e97f-71e4-436e-a7a9-67af3bdf59f7",
+  "parentTab": "id_1677491290416_0",
+  "group": "id_1753081374853_1",
+  "mode": {
+   "current": "",
+   "bypass": false,
+   "list": [
+    {
+     "name": "arg0",
+     "data": [
+      {
+       "id": "id_1675825867879_27",
+       "list": [
+        {
+         "id": "id_1704936301911_1",
+         "value": 0
+        }
+       ]
+      }
+     ],
+     "enable": true
+    }
+   ],
+   "name": "ChannelMerBF8E5"
+  }
+ },
+ {
+  "node": "6f952f96-15ce-4418-827c-28b92460cab4",
+  "parentTab": "id_1677491290416_0",
+  "group": "id_1753081374853_1",
+  "mode": {
+   "current": "",
+   "bypass": false,
+   "list": [
+    {
+     "name": "arg0",
+     "data": [
+      {
+       "id": "id_1678246329785_2",
+       "list": [
+        {
+         "id": "id_1677642341249_0",
+         "value": 50
+        },
+        {
+         "id": "id_1677642343355_1",
+         "value": 8
+        },
+        {
+         "id": "id_1677642344547_2",
+         "value": 0
+        }
+       ]
+      },
+      {
+       "id": "id_1702378606977_0",
+       "list": [
+        {
+         "id": "id_1693469084872_1",
+         "value": 0
+        }
+       ],
+       "expand": 1
+      }
+     ],
+     "enable": true
+    }
+   ],
+   "name": "DAC6"
+  }
+ },
+ {
+  "node": "12f37853-3745-421a-84b0-09fcb525e5b6",
+  "parentTab": "id_1677491290416_0",
+  "group": "id_1753081374853_1",
+  "mode": {
+   "current": "",
+   "list": [
+    {
+     "name": "arg0",
+     "data": [
+      {
+       "id": "id_1693539807876_1",
+       "list": [
+        {
+         "id": "id_1693469084872_1",
+         "value": 1
+        }
+       ]
+      }
+     ],
+     "enable": true
+    }
+   ],
+   "name": "config4235820"
+  }
+ },
+ {
+  "node": "24fec852-4a04-4ff4-a88f-e984c503f6e5",
+  "parentTab": "id_1677491290416_0",
+  "group": "id_1753081374853_1",
+  "mode": {
+   "current": "",
+   "bypass": false,
+   "list": [
+    {
+     "name": "arg0",
+     "data": [
+      {
+       "id": "id_1681280938229_0",
+       "value": 0
+      },
+      {
+       "id": "id_1676447481291_4",
+       "value": 16
+      },
+      {
+       "id": "id_1676447941026_6",
+       "value": -45
+      },
+      {
+       "id": "id_1678088452701_0",
+       "value": 1
+      },
+      {
+       "id": "id_1677290960342_0",
+       "value": 0
+      },
+      {
+       "id": "id_1676801188975_0",
+       "value": 10
+      },
+      {
+       "id": "id_1677751149521_1",
+       "list": []
+      }
+     ],
+     "enable": true,
+     "bypass": false
+    }
+   ],
+   "name": "Vol_SysRing"
+  }
+ },
+ {
+  "node": "ec154929-5218-49a6-b3ab-cdffe0438e1c",
+  "parentTab": "id_1677491290416_0",
+  "group": "id_1753081374853_1",
+  "mode": {
+   "current": "",
+   "bypass": false,
+   "list": [
+    {
+     "name": "arg0",
+     "data": [
+      {
+       "id": "id_1675825867879_27",
+       "list": [
+        {
+         "id": "id_1704936301911_1",
+         "value": 0
+        }
+       ]
+      }
+     ],
+     "enable": true
+    }
+   ],
+   "name": "ChannelMerBF8E6"
+  }
+ },
+ {
+  "node": "1b22fcc6-b712-49c3-ab72-6e9e35baf3eb",
+  "parentTab": "id_1677491290416_0",
+  "group": "id_1753081374853_1",
+  "mode": {
+   "current": "",
+   "bypass": false,
+   "list": [
+    {
+     "name": "arg0",
+     "data": [
+      {
+       "id": "id_1678246329785_2",
+       "list": [
+        {
+         "id": "id_1677642341249_0",
+         "value": 50
+        },
+        {
+         "id": "id_1677642343355_1",
+         "value": 8
+        },
+        {
+         "id": "id_1677642344547_2",
+         "value": 0
+        }
+       ]
+      },
+      {
+       "id": "id_1702378606977_0",
+       "list": [
+        {
+         "id": "id_1693469084872_1",
+         "value": 0
+        }
+       ],
+       "expand": 1
+      }
+     ],
+     "enable": true
+    }
+   ],
+   "name": "DAC7"
+  }
+ }
+]

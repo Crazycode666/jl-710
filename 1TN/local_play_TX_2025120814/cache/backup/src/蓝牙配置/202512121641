@@ -1,0 +1,1017 @@
+{
+ "fields": [
+  {
+   "__config__": {
+    "layout": "rowFormItem",
+    "tag": "group",
+    "tagIcon": "row",
+    "layoutTree": true,
+    "componentName": "蓝牙模式选择",
+    "enableUuid": "",
+    "showComponentName": true,
+    "dataType": [
+     "8",
+     "1"
+    ],
+    "template": "",
+    "span": 24,
+    "formId": 120,
+    "renderKey": "1201678360739644",
+    "children": [
+     {
+      "__config__": {
+       "label": "模式选择",
+       "showLabel": true,
+       "labelWidth": 80,
+       "tag": "el-select",
+       "tagIcon": "select",
+       "layout": "colFormItem",
+       "span": 6,
+       "required": false,
+       "regList": [],
+       "changeTag": true,
+       "searchSource": false,
+       "dataType": [
+        "32",
+        "1"
+       ],
+       "formId": 114,
+       "renderKey": "1141678240126194",
+       "saveWay": "macro",
+       "uuid": "CONFIG_BT_MODE",
+       "defaultValue": 1,
+       "originValue": 1,
+       "tip": "NORMAL模式为正常蓝牙模式",
+       "formItemWidth": "",
+       "paddingLeft": "",
+       "eventField": [],
+       "emptyValue": "1"
+      },
+      "__slot__": {
+       "options": [
+        {
+         "label": "NORMAL",
+         "value": 1
+        },
+        {
+         "label": "BQB",
+         "value": 2
+        },
+        {
+         "label": "FCC",
+         "value": 4
+        }
+       ]
+      },
+      "placeholder": "请选择模式选择",
+      "style": {
+       "width": "80%"
+      },
+      "clearable": false,
+      "disabled": false,
+      "filterable": false,
+      "multiple": false,
+      "id": "id_1678240126194_1",
+      "__vModel__": "field114",
+      "searchSource": false
+     },
+     {
+      "__config__": {
+       "label": "DUT使能",
+       "tag": "el-switch",
+       "tagIcon": "switch",
+       "defaultValue": 0,
+       "span": 7,
+       "showLabel": true,
+       "labelWidth": null,
+       "layout": "colFormItem",
+       "required": false,
+       "regList": [],
+       "changeTag": true,
+       "status": 0,
+       "dataType": [
+        "8",
+        "-1"
+       ],
+       "formId": 124,
+       "renderKey": "1241741072819414",
+       "saveWay": "macro",
+       "uuid": "TCFG_NORMAL_SET_DUT_MODE",
+       "eventField": [],
+       "tip": "开启后无线麦模式不能工作，并且需要手动关闭USB的读卡器、扬声器、麦克风功能",
+       "tipAlways": true
+      },
+      "style": {},
+      "disabled": false,
+      "active-text": "",
+      "inactive-text": "",
+      "active-color": null,
+      "inactive-color": null,
+      "active-value": 1,
+      "inactive-value": 0,
+      "id": "id_1741072819414_0",
+      "__vModel__": "field124"
+     }
+    ],
+    "eventField": []
+   },
+   "type": "default",
+   "justify": "start",
+   "align": "top",
+   "style": {
+    "height": "60px",
+    "paddingLeft": "0px"
+   },
+   "id": "id_1678360739644_0"
+  },
+  {
+   "__config__": {
+    "layout": "rowFormItem",
+    "tag": "group",
+    "tagIcon": "row",
+    "layoutTree": true,
+    "componentName": "BLE",
+    "showComponentName": true,
+    "document": "https://element.eleme.cn/#/zh-CN/component/layout#row-attributes",
+    "template": "",
+    "span": 24,
+    "formId": 108,
+    "renderKey": "1081641976559552",
+    "children": [
+     {
+      "__config__": {
+       "label": "MAC地址",
+       "labelWidth": 75,
+       "showLabel": true,
+       "changeTag": true,
+       "tag": "el-input",
+       "tagIcon": "input",
+       "defaultValue": "FF FF FF FF FF FF",
+       "required": false,
+       "layout": "colFormItem",
+       "span": 6,
+       "document": "https://element.eleme.cn/#/zh-CN/component/input",
+       "regList": [],
+       "dataType": [
+        "MAC_ADDR"
+       ],
+       "formId": 124,
+       "renderKey": "1241741266842323",
+       "eventField": [],
+       "saveWay": "bin",
+       "uuid": "102",
+       "dataAlignLen": "",
+       "tip": "（指定MAC地址后需要编译并且全擦除FLASH后进行下载）",
+       "tipAlways": false
+      },
+      "__slot__": {
+       "prepend": "",
+       "append": ""
+      },
+      "placeholder": "",
+      "style": {
+       "width": "80%"
+      },
+      "clearable": true,
+      "prefix-icon": "",
+      "suffix-icon": "",
+      "maxlength": "31",
+      "show-word-limit": false,
+      "readonly": false,
+      "disabled": false,
+      "__vModel__": "field124",
+      "id": "id_1741266842323_1"
+     },
+     {
+      "__config__": {
+       "label": "最大发射功率",
+       "showLabel": true,
+       "labelWidth": "",
+       "tag": "el-select",
+       "tagIcon": "select",
+       "layout": "colFormItem",
+       "span": 6,
+       "required": false,
+       "regList": [],
+       "changeTag": true,
+       "dataType": [
+        "32"
+       ],
+       "document": "https://element.eleme.cn/#/zh-CN/component/select",
+       "formId": 113,
+       "renderKey": "1131641979429141",
+       "defaultValue": 0,
+       "saveWay": "macro",
+       "uuid": "TCFG_BT_BLE_TX_POWER",
+       "eventField": [],
+       "originValue": 4,
+       "tip": "",
+       "tipAlways": false
+      },
+      "__slot__": {
+       "options": [
+        {
+         "label": "0 ",
+         "value": 0
+        },
+        {
+         "label": "1",
+         "value": 1
+        },
+        {
+         "label": "2",
+         "value": 2
+        },
+        {
+         "label": "3",
+         "value": 3
+        },
+        {
+         "label": "4",
+         "value": 4
+        },
+        {
+         "label": "5（需注意杂散）",
+         "value": 5,
+         "hide": false,
+         "disabled": false
+        }
+       ]
+      },
+      "placeholder": "",
+      "style": {
+       "width": "100%"
+      },
+      "clearable": false,
+      "disabled": false,
+      "filterable": false,
+      "multiple": false,
+      "__vModel__": "field113",
+      "id": "id_1647310638392_48"
+     }
+    ],
+    "dataType": [],
+    "saveWay": "",
+    "uuid": "",
+    "eventField": [],
+    "enableUuid": "TCFG_USER_BLE_ENABLE",
+    "disable": false,
+    "emptyValue": "0"
+   },
+   "type": "default",
+   "justify": "start",
+   "align": "top",
+   "style": {
+    "height": "60px",
+    "paddingLeft": "0px"
+   },
+   "id": "id_1647310638392_52"
+  },
+  {
+   "__config__": {
+    "layout": "rowFormItem",
+    "tag": "group",
+    "tagIcon": "row",
+    "layoutTree": true,
+    "componentName": "蓝牙PA配置",
+    "enableUuid": "TCFG_BT_RF_USE_EXT_PA_ENABLE",
+    "showComponentName": true,
+    "dataType": [],
+    "status": 0,
+    "template": "",
+    "hideAddTemplate": false,
+    "span": 24,
+    "formId": 125,
+    "renderKey": "1251741575677098",
+    "children": [
+     {
+      "__config__": {
+       "label": "PA供电引脚",
+       "showLabel": true,
+       "labelWidth": null,
+       "tag": "el-select",
+       "tagIcon": "select",
+       "layout": "colFormItem",
+       "span": 6,
+       "required": false,
+       "regList": [],
+       "changeTag": true,
+       "searchSource": false,
+       "dataType": [
+        "macro"
+       ],
+       "document": "https://element.eleme.cn/#/zh-CN/component/select",
+       "formId": 127,
+       "renderKey": "1271741576098834",
+       "eventField": [
+        "device",
+        "gpio"
+       ],
+       "saveWay": "macro",
+       "defaultValue": "id_1743405039177_0",
+       "uuid": "TCFG_RF_PA_LDO_PORT",
+       "originValue": "NO_CONFIG_PORT",
+       "emptyValue": "NO_CONFIG_PORT"
+      },
+      "__slot__": {
+       "options": [
+        {
+         "label": "IO_PORTA_00",
+         "value": "id_1647485267192_66"
+        },
+        {
+         "label": "IO_PORTA_01",
+         "value": "id_1647485267192_67"
+        },
+        {
+         "label": "IO_PORTA_02",
+         "value": "id_1647485267192_68"
+        },
+        {
+         "label": "IO_PORTA_03",
+         "value": "id_1647485267192_69"
+        },
+        {
+         "label": "IO_PORTA_04",
+         "value": "id_1647485267192_70"
+        },
+        {
+         "label": "IO_PORTA_05",
+         "value": "id_1647485267192_71"
+        },
+        {
+         "label": "IO_PORTA_06",
+         "value": "id_1647485267192_72"
+        },
+        {
+         "label": "IO_PORTB_00",
+         "value": "id_1647485267192_74"
+        },
+        {
+         "label": "IO_PORTB_01",
+         "value": "id_1647485267192_75"
+        },
+        {
+         "label": "IO_PORTB_02",
+         "value": "id_1647485267192_76"
+        },
+        {
+         "label": "IO_PORTB_03",
+         "value": "id_1647485267192_77"
+        },
+        {
+         "label": "IO_PORTB_04",
+         "value": "id_1647485267192_78"
+        },
+        {
+         "label": "IO_PORTB_05",
+         "value": "id_1647485267192_79"
+        },
+        {
+         "label": "IO_PORTB_06",
+         "value": "id_1647485267192_80"
+        },
+        {
+         "label": "IO_PORTB_07",
+         "value": "id_1647485267192_81"
+        },
+        {
+         "label": "IO_PORTB_08",
+         "value": "id_1659942520267_25"
+        },
+        {
+         "label": "IO_PORTB_09",
+         "value": "id_1659942416666_18"
+        },
+        {
+         "label": "IO_PORTB_10",
+         "value": "id_1659942417369_19"
+        },
+        {
+         "label": "IO_PORTB_11",
+         "value": "id_1659942418129_20"
+        },
+        {
+         "label": "IO_PORTC_00",
+         "value": "id_1647485267192_82"
+        },
+        {
+         "label": "IO_PORTC_01",
+         "value": "id_1647485267192_83"
+        },
+        {
+         "label": "IO_PORTC_02",
+         "value": "id_1647485267192_84"
+        },
+        {
+         "label": "IO_PORTC_03",
+         "value": "id_1647485267192_85"
+        },
+        {
+         "label": "IO_PORTC_04",
+         "value": "id_1647485267192_86"
+        },
+        {
+         "label": "IO_PORT_DM",
+         "value": "id_1651200854573_20"
+        },
+        {
+         "label": "IO_PORT_DP",
+         "value": "id_1651200840445_19"
+        },
+        {
+         "label": "IO_PORTF_00",
+         "value": "id_1708670662890_5"
+        },
+        {
+         "label": "IO_PORTF_01",
+         "value": "id_1708670490604_0"
+        },
+        {
+         "label": "IO_PORTF_02",
+         "value": "id_1708670648187_1"
+        },
+        {
+         "label": "IO_PORTF_03",
+         "value": "id_1708670652673_2"
+        },
+        {
+         "label": "IO_PORTF_04",
+         "value": "id_1708670655579_3"
+        },
+        {
+         "label": "IO_PORTF_05",
+         "value": "id_1708670659570_4"
+        },
+        {
+         "label": "IO_PORTP_00",
+         "value": "id_1743077011773_0"
+        },
+        {
+         "label": "IO_PORTP_01",
+         "value": "id_1743077060182_1"
+        },
+        {
+         "label": "IO_PORTP_02",
+         "value": "id_1743077061613_2"
+        },
+        {
+         "label": "NO_CONFIG_PORT",
+         "value": "id_1743405039177_0"
+        }
+       ]
+      },
+      "placeholder": "请选择PA供电引脚",
+      "style": {
+       "width": "100%"
+      },
+      "clearable": true,
+      "disabled": false,
+      "filterable": false,
+      "multiple": false,
+      "__vModel__": "field127",
+      "searchSource": true,
+      "id": "id_1741576098834_6"
+     },
+     {
+      "__config__": {
+       "label": "TX_EN引脚",
+       "showLabel": true,
+       "labelWidth": null,
+       "tag": "el-select",
+       "tagIcon": "select",
+       "layout": "colFormItem",
+       "span": 6,
+       "required": false,
+       "regList": [],
+       "changeTag": true,
+       "searchSource": false,
+       "dataType": [
+        "macro"
+       ],
+       "document": "https://element.eleme.cn/#/zh-CN/component/select",
+       "formId": 125,
+       "renderKey": "1251741575929107",
+       "eventField": [
+        "device",
+        "gpio"
+       ],
+       "saveWay": "macro",
+       "defaultValue": "id_1743405039177_0",
+       "uuid": "TCFG_RF_PA_TX_PORT",
+       "originValue": "NO_CONFIG_PORT",
+       "emptyValue": "NO_CONFIG_PORT"
+      },
+      "__slot__": {
+       "options": [
+        {
+         "label": "IO_PORTA_00",
+         "value": "id_1647485267192_66"
+        },
+        {
+         "label": "IO_PORTA_01",
+         "value": "id_1647485267192_67"
+        },
+        {
+         "label": "IO_PORTA_02",
+         "value": "id_1647485267192_68"
+        },
+        {
+         "label": "IO_PORTA_03",
+         "value": "id_1647485267192_69"
+        },
+        {
+         "label": "IO_PORTA_04",
+         "value": "id_1647485267192_70"
+        },
+        {
+         "label": "IO_PORTA_05",
+         "value": "id_1647485267192_71"
+        },
+        {
+         "label": "IO_PORTA_06",
+         "value": "id_1647485267192_72"
+        },
+        {
+         "label": "IO_PORTB_00",
+         "value": "id_1647485267192_74"
+        },
+        {
+         "label": "IO_PORTB_01",
+         "value": "id_1647485267192_75"
+        },
+        {
+         "label": "IO_PORTB_02",
+         "value": "id_1647485267192_76"
+        },
+        {
+         "label": "IO_PORTB_03",
+         "value": "id_1647485267192_77"
+        },
+        {
+         "label": "IO_PORTB_04",
+         "value": "id_1647485267192_78"
+        },
+        {
+         "label": "IO_PORTB_05",
+         "value": "id_1647485267192_79"
+        },
+        {
+         "label": "IO_PORTB_06",
+         "value": "id_1647485267192_80"
+        },
+        {
+         "label": "IO_PORTB_07",
+         "value": "id_1647485267192_81"
+        },
+        {
+         "label": "IO_PORTB_08",
+         "value": "id_1659942520267_25"
+        },
+        {
+         "label": "IO_PORTB_09",
+         "value": "id_1659942416666_18"
+        },
+        {
+         "label": "IO_PORTB_10",
+         "value": "id_1659942417369_19"
+        },
+        {
+         "label": "IO_PORTB_11",
+         "value": "id_1659942418129_20"
+        },
+        {
+         "label": "IO_PORTC_00",
+         "value": "id_1647485267192_82"
+        },
+        {
+         "label": "IO_PORTC_01",
+         "value": "id_1647485267192_83"
+        },
+        {
+         "label": "IO_PORTC_02",
+         "value": "id_1647485267192_84"
+        },
+        {
+         "label": "IO_PORTC_03",
+         "value": "id_1647485267192_85"
+        },
+        {
+         "label": "IO_PORTC_04",
+         "value": "id_1647485267192_86"
+        },
+        {
+         "label": "IO_PORT_DM",
+         "value": "id_1651200854573_20"
+        },
+        {
+         "label": "IO_PORT_DP",
+         "value": "id_1651200840445_19"
+        },
+        {
+         "label": "IO_PORTF_00",
+         "value": "id_1708670662890_5"
+        },
+        {
+         "label": "IO_PORTF_01",
+         "value": "id_1708670490604_0"
+        },
+        {
+         "label": "IO_PORTF_02",
+         "value": "id_1708670648187_1"
+        },
+        {
+         "label": "IO_PORTF_03",
+         "value": "id_1708670652673_2"
+        },
+        {
+         "label": "IO_PORTF_04",
+         "value": "id_1708670655579_3"
+        },
+        {
+         "label": "IO_PORTF_05",
+         "value": "id_1708670659570_4"
+        },
+        {
+         "label": "IO_PORTP_00",
+         "value": "id_1743077011773_0"
+        },
+        {
+         "label": "IO_PORTP_01",
+         "value": "id_1743077060182_1"
+        },
+        {
+         "label": "IO_PORTP_02",
+         "value": "id_1743077061613_2"
+        },
+        {
+         "label": "NO_CONFIG_PORT",
+         "value": "id_1743405039177_0"
+        }
+       ]
+      },
+      "placeholder": "请选择TX_EN引脚",
+      "style": {
+       "width": "100%"
+      },
+      "clearable": true,
+      "disabled": false,
+      "filterable": false,
+      "multiple": false,
+      "__vModel__": "field125",
+      "searchSource": true,
+      "id": "id_1741575929107_4"
+     },
+     {
+      "__config__": {
+       "label": "RX_EN引脚",
+       "showLabel": true,
+       "labelWidth": null,
+       "tag": "el-select",
+       "tagIcon": "select",
+       "layout": "colFormItem",
+       "span": 6,
+       "required": false,
+       "regList": [],
+       "changeTag": true,
+       "searchSource": false,
+       "dataType": [
+        "macro"
+       ],
+       "document": "https://element.eleme.cn/#/zh-CN/component/select",
+       "formId": 126,
+       "renderKey": "1261741576070482",
+       "eventField": [
+        "device",
+        "gpio"
+       ],
+       "saveWay": "macro",
+       "defaultValue": "id_1743405039177_0",
+       "uuid": "TCFG_RF_PA_RX_PORT",
+       "originValue": "NO_CONFIG_PORT",
+       "emptyValue": "NO_CONFIG_PORT"
+      },
+      "__slot__": {
+       "options": [
+        {
+         "label": "IO_PORTA_00",
+         "value": "id_1647485267192_66"
+        },
+        {
+         "label": "IO_PORTA_01",
+         "value": "id_1647485267192_67"
+        },
+        {
+         "label": "IO_PORTA_02",
+         "value": "id_1647485267192_68"
+        },
+        {
+         "label": "IO_PORTA_03",
+         "value": "id_1647485267192_69"
+        },
+        {
+         "label": "IO_PORTA_04",
+         "value": "id_1647485267192_70"
+        },
+        {
+         "label": "IO_PORTA_05",
+         "value": "id_1647485267192_71"
+        },
+        {
+         "label": "IO_PORTA_06",
+         "value": "id_1647485267192_72"
+        },
+        {
+         "label": "IO_PORTB_00",
+         "value": "id_1647485267192_74"
+        },
+        {
+         "label": "IO_PORTB_01",
+         "value": "id_1647485267192_75"
+        },
+        {
+         "label": "IO_PORTB_02",
+         "value": "id_1647485267192_76"
+        },
+        {
+         "label": "IO_PORTB_03",
+         "value": "id_1647485267192_77"
+        },
+        {
+         "label": "IO_PORTB_04",
+         "value": "id_1647485267192_78"
+        },
+        {
+         "label": "IO_PORTB_05",
+         "value": "id_1647485267192_79"
+        },
+        {
+         "label": "IO_PORTB_06",
+         "value": "id_1647485267192_80"
+        },
+        {
+         "label": "IO_PORTB_07",
+         "value": "id_1647485267192_81"
+        },
+        {
+         "label": "IO_PORTB_08",
+         "value": "id_1659942520267_25"
+        },
+        {
+         "label": "IO_PORTB_09",
+         "value": "id_1659942416666_18"
+        },
+        {
+         "label": "IO_PORTB_10",
+         "value": "id_1659942417369_19"
+        },
+        {
+         "label": "IO_PORTB_11",
+         "value": "id_1659942418129_20"
+        },
+        {
+         "label": "IO_PORTC_00",
+         "value": "id_1647485267192_82"
+        },
+        {
+         "label": "IO_PORTC_01",
+         "value": "id_1647485267192_83"
+        },
+        {
+         "label": "IO_PORTC_02",
+         "value": "id_1647485267192_84"
+        },
+        {
+         "label": "IO_PORTC_03",
+         "value": "id_1647485267192_85"
+        },
+        {
+         "label": "IO_PORTC_04",
+         "value": "id_1647485267192_86"
+        },
+        {
+         "label": "IO_PORT_DM",
+         "value": "id_1651200854573_20"
+        },
+        {
+         "label": "IO_PORT_DP",
+         "value": "id_1651200840445_19"
+        },
+        {
+         "label": "IO_PORTF_00",
+         "value": "id_1708670662890_5"
+        },
+        {
+         "label": "IO_PORTF_01",
+         "value": "id_1708670490604_0"
+        },
+        {
+         "label": "IO_PORTF_02",
+         "value": "id_1708670648187_1"
+        },
+        {
+         "label": "IO_PORTF_03",
+         "value": "id_1708670652673_2"
+        },
+        {
+         "label": "IO_PORTF_04",
+         "value": "id_1708670655579_3"
+        },
+        {
+         "label": "IO_PORTF_05",
+         "value": "id_1708670659570_4"
+        },
+        {
+         "label": "IO_PORTP_00",
+         "value": "id_1743077011773_0"
+        },
+        {
+         "label": "IO_PORTP_01",
+         "value": "id_1743077060182_1"
+        },
+        {
+         "label": "IO_PORTP_02",
+         "value": "id_1743077061613_2"
+        },
+        {
+         "label": "NO_CONFIG_PORT",
+         "value": "id_1743405039177_0"
+        }
+       ]
+      },
+      "placeholder": "请选择RX_EN引脚",
+      "style": {
+       "width": "100%"
+      },
+      "clearable": true,
+      "disabled": false,
+      "filterable": false,
+      "multiple": false,
+      "__vModel__": "field126",
+      "searchSource": true,
+      "id": "id_1741576070482_5"
+     }
+    ],
+    "eventField": [],
+    "uuid": "",
+    "saveWay": "",
+    "disable": true,
+    "tip": "",
+    "tipAlways": false
+   },
+   "type": "default",
+   "justify": "start",
+   "align": "top",
+   "style": {
+    "height": "60px",
+    "paddingLeft": "0px"
+   },
+   "id": "id_1741575677098_0"
+  },
+  {
+   "__config__": {
+    "layout": "rowFormItem",
+    "tag": "group",
+    "tagIcon": "row",
+    "layoutTree": true,
+    "componentName": "其他",
+    "enableUuid": "",
+    "showComponentName": true,
+    "dataType": [
+     "8",
+     "1"
+    ],
+    "status": 0,
+    "template": "",
+    "hideAddTemplate": false,
+    "span": 24,
+    "formId": 125,
+    "renderKey": "1251741072935287",
+    "children": [
+     {
+      "__config__": {
+       "label": "无连接关机时间(s)",
+       "showLabel": true,
+       "changeTag": true,
+       "labelWidth": 180,
+       "tag": "el-input-number",
+       "tagIcon": "number",
+       "defaultValue": 0,
+       "span": 7,
+       "layout": "colFormItem",
+       "required": false,
+       "regList": [],
+       "dataType": [
+        "16"
+       ],
+       "document": "https://element.eleme.cn/#/zh-CN/component/input-number",
+       "formId": 110,
+       "renderKey": "1101660304360450",
+       "eventField": [],
+       "tip": "",
+       "saveWay": "macro",
+       "uuid": "TCFG_AUTO_SHUT_DOWN_TIME",
+       "originValue": 0
+      },
+      "placeholder": "默认60s无连接关机时间(s)",
+      "step": 10,
+      "step-strictly": false,
+      "controls-position": "",
+      "disabled": false,
+      "__vModel__": "field110",
+      "min": 0,
+      "max": 3000,
+      "id": "id_1660304360450_5"
+     },
+     {
+      "__config__": {
+       "label": "oob",
+       "showLabel": true,
+       "labelWidth": 40,
+       "tag": "el-select",
+       "tagIcon": "select",
+       "layout": "colFormItem",
+       "span": 6,
+       "required": false,
+       "defaultValue": 0,
+       "regList": [],
+       "changeTag": true,
+       "searchSource": false,
+       "status": 0,
+       "dataType": [
+        "32",
+        "-1"
+       ],
+       "formId": 101,
+       "renderKey": "1011744639469003",
+       "eventField": [],
+       "tip": "",
+       "tipAlways": false,
+       "saveWay": "macro",
+       "uuid": "TCFG_RF_OOB_SEL",
+       "emptyValue": "0"
+      },
+      "__slot__": {
+       "options": [
+        {
+         "label": "0",
+         "value": 0,
+         "hide": false,
+         "disabled": false
+        },
+        {
+         "label": "1",
+         "value": 1,
+         "hide": false,
+         "disabled": false
+        },
+        {
+         "label": "2",
+         "value": 2,
+         "hide": false,
+         "disabled": false
+        }
+       ]
+      },
+      "placeholder": "请选择oob",
+      "style": {
+       "width": "50%"
+      },
+      "clearable": false,
+      "disabled": false,
+      "filterable": false,
+      "multiple": false,
+      "id": "id_1744639469003_0",
+      "__vModel__": "field101"
+     }
+    ],
+    "eventField": []
+   },
+   "type": "default",
+   "justify": "start",
+   "align": "top",
+   "style": {
+    "height": "60px",
+    "paddingLeft": "0px"
+   },
+   "id": "id_1741072935287_1"
+  }
+ ],
+ "formName": "蓝牙配置",
+ "formRef": "elForm",
+ "formModel": "formData",
+ "size": "small",
+ "labelPosition": "left",
+ "labelWidth": 100,
+ "formRules": "rules",
+ "gutter": 30,
+ "disabled": false,
+ "span": 7,
+ "formBtns": false,
+ "unFocusedComponentBorder": false,
+ "maxFormId": 306,
+ "version": {
+  "code": 1,
+  "tool": "4.4.0"
+ }
+}

@@ -1,0 +1,198 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1.4. 绑定配对 &mdash; JL Project Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="https://doc.zh-jieli.com/static/css/custom.css" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=fa47ad08"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="https://doc.zh-jieli.com/static/js/custom.js"></script>
+      <script src="../../../../_static/js/custom.js?v=bfa33168"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="1.5. ADC和DAC相关配置" href="ADC%E5%92%8CDAC%E9%85%8D%E7%BD%AE.html" />
+    <link rel="prev" title="1.3. 音量调节说明" href="%E9%9F%B3%E9%87%8F%E8%B0%83%E8%8A%82.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html">
+            
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">SDK入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../framework/index.html">1. 技术框架</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/index.html">2. 快速入门</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">主要功能介绍</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">1. SDK 详细介绍</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="%E9%A2%86%E5%A4%B9%E9%BA%A6/index.html">1.1. 领夹麦应用设计说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E9%99%8D%E5%99%AA.html">1.2. 降噪</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E9%9F%B3%E9%87%8F%E8%B0%83%E8%8A%82.html">1.3. 音量调节说明</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.4. 绑定配对</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bst">1.4.1. BST传输方式绑定</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ADC%E5%92%8CDAC%E9%85%8D%E7%BD%AE.html">1.5. ADC和DAC相关配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E8%87%AA%E5%AE%9A%E4%B9%89%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93.html">1.6. 自定义数据传输</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E5%BB%B6%E6%97%B6%E9%85%8D%E7%BD%AE.html">1.7. 延时设置说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E8%93%9D%E7%89%99PA%E9%85%8D%E7%BD%AE.html">1.8. 蓝牙PA配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E6%B5%8B%E8%AF%95%E7%9B%92%E4%BD%BF%E7%94%A8.html">1.9. 测试盒使用说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E9%9F%B3%E6%95%88%E5%88%87%E6%8D%A2.html">1.10. 音效切换说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E4%BF%A1%E5%8F%B7%E5%BC%BA%E5%BA%A6%E8%8E%B7%E5%8F%96.html">1.11. 信号强度获取</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E5%8A%9F%E8%80%97%E4%BC%98%E5%8C%96.html">1.12. 功耗优化说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="%E9%9F%B3%E9%A2%9124BIT%E4%BF%AE%E6%94%B9%E8%AF%B4%E6%98%8E.html">1.13. 音频24BIT修改说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84%E4%BB%8B%E7%BB%8D/index.html">1.14. 系统管理</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">系统功能进阶</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../driver/index.html">1. 外设驱动</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../driver/pmu/index.html">2. 电源管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../key_config/index.html">3. 按键配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pwm_led/index.html">4. LED状态显示</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../system/file_system/index.html">5. 文件系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../system/os/index.html">6. 操作系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev_manager/index.html">7. 设备管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../system/%E9%80%9A%E7%94%A8%E7%BB%84%E4%BB%B6/index.html">8. 通用组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../system/report/index.html">9. 系统状态报告</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../system/resource_manage/index.html">10. 资源管理帮助</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">蓝牙功能进阶</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../bt/btstack/index.html">1. 蓝牙协议栈</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bt/ble/index.html">2. BLE开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../bt/FindMy/FindMy.html">3. FindMy</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">音频功能进阶</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../audio/index.html">1. 音频播放</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../audio_config/index.html">2. 音频配置</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../audio_flow/index.html">3. 音频流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../audio_effects/index.html">4. 音效调试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../audio_FAQ/index.html">5. 音频FAQ</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">JieLi_蓝牙音频</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"><span class="section-number">1. </span>SDK 详细介绍</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1.4. </span>绑定配对</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><span class="section-number">1.4. </span>绑定配对<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<section id="bst">
+<h2><span class="section-number">1.4.1. </span>BST传输方式绑定<a class="headerlink" href="#bst" title="Link to this heading"></a></h2>
+<blockquote>
+<div><p>SDK支持 <strong>不绑定、 TX生成绑定配对码、RX生成绑定配对码</strong> 三种绑定方式，默认使用了 <strong>不绑定</strong> 的方式。</p>
+<img alt="../../../../_images/bst%E7%BB%91%E5%AE%9A.png" src="../../../../_images/bst%E7%BB%91%E5%AE%9A.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>BST绑定的功能逻辑可概括为以下几点：</p>
+<ol class="arabic simple">
+<li><p>BST绑定是基于设备连接上后通过蓝牙进行交互，并不是提前进行绑定功能;</p></li>
+<li><p>绑定功能的配对码可以由TX或RX端生成;</p></li>
+<li><p>当选择TX端生成配对码且在2T1连接中先连上一台RX，TX将等待RX连上后发过来的 <strong>0x55aa55aa</strong> 指令，然后生成配对码并发给RX；如果此时不自动定时切换私有配对码和公有配对码，RX将无法与第二台TX连接（可设置变量.pairSwMs实现定时切换配对码）。也可以先通过 <code class="docutils literal notranslate"><span class="pre">wireless_trans_get_pair_code(&quot;big_rx&quot;,</span> <span class="pre">(u8</span> <span class="pre">*)&amp;pair_code,</span> <span class="pre">0)</span></code> ; 获取公有配对码，然后通过 <code class="docutils literal notranslate"><span class="pre">wireless_trans_set_pair_code(&quot;big_rx&quot;,</span> <span class="pre">(u8</span> <span class="pre">*)&amp;pair_code)</span></code> ;设置第二路scan使用公有配对码进行搜索。当第二台TX连上后，第二台TX也会发给一个配对码给RX，但此时RX会先检查自身是否已经有配对码，如果有则回复现在正在使用的配对码给第二台TX，从而实现TX1、TX2、RX使用同一个配对码；</p></li>
+<li><p>当选择RX端生成配对码且在2T1连接中先连上一台TX，RX会生成配对码并发给TX，此时如果不自动定时切换私有配对码和公有配对码，RX将无法与第二台TX连接（可设置变量.pairSwMs实现定时切换配对码）。也可以先通过 <code class="docutils literal notranslate"><span class="pre">wireless_trans_get_pair_code(&quot;big_rx&quot;,</span> <span class="pre">(u8</span> <span class="pre">*)&amp;pair_code,</span> <span class="pre">0)</span></code> ;获取公有配对码，然后通过 <code class="docutils literal notranslate"><span class="pre">wireless_trans_set_pair_code(&quot;big_rx&quot;,</span> <span class="pre">(u8</span> <span class="pre">*)&amp;pair_code)</span></code> ;设置第二路scan使用公有配对码进行搜索；</p></li>
+<li><p>绑定了私有配对码后，设备不能被测试盒搜索到。只能通过解除绑定或者设置变量.pairSwMs实现定时切换至公有配对码才能被测试盒搜到。</p></li>
+</ol>
+</div>
+<img alt="../../../../_images/TX%E7%BB%91%E5%AE%9A.png" src="../../../../_images/TX%E7%BB%91%E5%AE%9A.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../../_images/TX%E7%BB%91%E5%AE%9A1.png" src="../../../../_images/TX%E7%BB%91%E5%AE%9A1.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../../_images/RX%E7%BB%91%E5%AE%9A.png" src="../../../../_images/RX%E7%BB%91%E5%AE%9A.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../../_images/RX%E7%BB%91%E5%AE%9A1.png" src="../../../../_images/RX%E7%BB%91%E5%AE%9A1.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../../../../_images/%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2%E7%BB%91%E5%AE%9A%E7%A0%81.png" src="../../../../_images/%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2%E7%BB%91%E5%AE%9A%E7%A0%81.png" />
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="%E9%9F%B3%E9%87%8F%E8%B0%83%E8%8A%82.html" class="btn btn-neutral float-left" title="1.3. 音量调节说明" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ADC%E5%92%8CDAC%E9%85%8D%E7%BD%AE.html" class="btn btn-neutral float-right" title="1.5. ADC和DAC相关配置" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2010-2026, 杰理科技股份有限公司.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

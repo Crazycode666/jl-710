@@ -1,0 +1,35 @@
+绑定配对
+#########
+
+BST传输方式绑定
+******************
+
+    SDK支持 **不绑定、 TX生成绑定配对码、RX生成绑定配对码** 三种绑定方式，默认使用了 **不绑定** 的方式。
+    
+    .. image:: imgs/bst绑定.png
+    |
+    .. attention:: 
+        
+        BST绑定的功能逻辑可概括为以下几点：
+
+        1. BST绑定是基于设备连接上后通过蓝牙进行交互，并不是提前进行绑定功能;
+
+        2. 绑定功能的配对码可以由TX或RX端生成;
+
+        3. 当选择TX端生成配对码且在2T1连接中先连上一台RX，TX将等待RX连上后发过来的 **0x55aa55aa** 指令，然后生成配对码并发给RX；如果此时不自动定时切换私有配对码和公有配对码，RX将无法与第二台TX连接（可设置变量.pairSwMs实现定时切换配对码）。也可以先通过 ``wireless_trans_get_pair_code("big_rx", (u8 *)&pair_code, 0)`` ; 获取公有配对码，然后通过 ``wireless_trans_set_pair_code("big_rx", (u8 *)&pair_code)`` ;设置第二路scan使用公有配对码进行搜索。当第二台TX连上后，第二台TX也会发给一个配对码给RX，但此时RX会先检查自身是否已经有配对码，如果有则回复现在正在使用的配对码给第二台TX，从而实现TX1、TX2、RX使用同一个配对码；
+
+        4. 当选择RX端生成配对码且在2T1连接中先连上一台TX，RX会生成配对码并发给TX，此时如果不自动定时切换私有配对码和公有配对码，RX将无法与第二台TX连接（可设置变量.pairSwMs实现定时切换配对码）。也可以先通过 ``wireless_trans_get_pair_code("big_rx", (u8 *)&pair_code, 0)`` ;获取公有配对码，然后通过 ``wireless_trans_set_pair_code("big_rx", (u8 *)&pair_code)`` ;设置第二路scan使用公有配对码进行搜索；
+
+        5. 绑定了私有配对码后，设备不能被测试盒搜索到。只能通过解除绑定或者设置变量.pairSwMs实现定时切换至公有配对码才能被测试盒搜到。
+
+    .. image:: imgs/TX绑定.png
+    |
+    .. image:: imgs/TX绑定1.png
+    |
+    .. image:: imgs/RX绑定.png
+    |
+    .. image:: imgs/RX绑定1.png
+    |
+    .. image:: imgs/自动切换绑定码.png
+
+

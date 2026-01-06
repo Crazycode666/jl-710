@@ -1,0 +1,147 @@
+{
+ "type": "无线麦",
+ "sdk": "wireless_mic",
+ "singleSeries": false,
+ "chip": "AC710N",
+ "version": "1.0.0",
+ "ingoreConfig": false,
+ "pack": "AC710N-demo",
+ "patch": {
+  "title": "1.4.0",
+  "sn": 400.05,
+  "relateVersion": "4.6.2"
+ },
+ "specialPatchKey": "",
+ "projectType": "OfflineProject",
+ "tabform": [
+  {
+   "type": 1,
+   "fileName": "src\\板级配置.json",
+   "binName": "boardcfg.bin",
+   "showName": "板级配置"
+  },
+  {
+   "type": 1,
+   "fileName": "src\\功能配置.json",
+   "binName": "modecfg.bin",
+   "showName": "功能配置"
+  },
+  {
+   "type": 1,
+   "fileName": "src\\按键配置.json",
+   "binName": "keycfg.bin",
+   "showName": "按键配置"
+  },
+  {
+   "type": 1,
+   "fileName": "src\\电源配置.json",
+   "binName": "powercfg.bin",
+   "showName": "电源配置"
+  },
+  {
+   "type": 1,
+   "fileName": "src\\UI配置.json",
+   "binName": "uicfg.bin",
+   "showName": "UI配置"
+  },
+  {
+   "type": 1,
+   "fileName": "src\\蓝牙配置.json",
+   "binName": "btcfg.bin",
+   "showName": "蓝牙配置"
+  },
+  {
+   "type": 1,
+   "fileName": "src\\LE_AUDIO配置",
+   "binName": "leacfg.bin",
+   "showName": "LE_AUDIO配置",
+   "folder": true,
+   "files": [
+    {
+     "type": 1,
+     "fileName": "src\\LE_AUDIO配置\\公共配置.json",
+     "binName": "leacfg.bin",
+     "showName": "公共配置",
+     "data": ""
+    },
+    {
+     "type": 1,
+     "fileName": "src\\LE_AUDIO配置\\JL_BIS配置.json",
+     "binName": "leacfg.bin",
+     "showName": "JL_BIS配置",
+     "data": ""
+    }
+   ]
+  },
+  {
+   "type": 1,
+   "fileName": "src\\升级配置.json",
+   "binName": "updatecfg.bin",
+   "showName": "升级配置"
+  },
+  {
+   "type": 1,
+   "fileName": "src\\音频配置.json",
+   "binName": "audiocfg.bin",
+   "showName": "音频配置"
+  },
+  {
+   "type": 3,
+   "fileName": "src\\提示音.tone",
+   "binName": "",
+   "showName": "提示音"
+  },
+  {
+   "type": 4,
+   "fileName": "src\\音频流程",
+   "binName": "stream.bin",
+   "showName": "音频流程",
+   "folder": true,
+   "files": [
+    {
+     "type": 4,
+     "fileName": "src\\音频流程\\麦克风音效.x6flow",
+     "binName": "stream.bin",
+     "showName": "麦克风音效",
+     "data": ""
+    },
+    {
+     "type": 4,
+     "fileName": "src\\音频流程\\USB Audio.x6flow",
+     "binName": "stream.bin",
+     "showName": "USB Audio",
+     "data": ""
+    },
+    {
+     "type": 4,
+     "fileName": "src\\音频流程\\提示音.x6flow",
+     "binName": "stream.bin",
+     "showName": "提示音",
+     "data": ""
+    },
+    {
+     "showName": "本地播放",
+     "fileName": "src\\音频流程\\本地播放.x6flow",
+     "folder": false,
+     "binName": "stream.bin",
+     "type": 4,
+     "data": ""
+    }
+   ]
+  }
+ ],
+ "create_time": "2025-12-08T03:06:46.070Z",
+ "update_time": "2025-12-15T09:00:47.314Z",
+ "standardPatch": "",
+ "lastOpenToolVersion": "4.7.0",
+ "lastStencilFlowTime": "2025-12-08T11:07:12+08:00",
+ "proxyRepoid": null,
+ "versionName": "1.0.0",
+ "provider": "杰理",
+ "checkPatchTime": 0,
+ "relateVersion": "4.6.2",
+ "variant": [],
+ "defaultVariant": {
+  "name": "默认配置"
+ }
+}
